@@ -1,0 +1,32 @@
+[
+    {
+        "vendorId": "AWS001",
+        "vendorName": "Amazon Web Services",
+        "vendorAddress": "410 Terry Ave N, Seattle, WA 98109, USA",
+        "vendorPhoneNumber": "+1-206-266-1000"
+    },
+    {
+        "vendorId": "GCP001", 
+        "vendorName": "Google Cloud Platform",
+        "vendorAddress": "1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA",
+        "vendorPhoneNumber": "+1-650-253-0000"
+    },
+    {
+        "vendorId": "AZ001",
+        "vendorName": "Microsoft Azure",
+        "vendorAddress": "One Microsoft Way, Redmond, WA 98052, USA", 
+        "vendorPhoneNumber": "+1-425-882-8080"
+    },
+    {
+        "vendorId": "IBM001",
+        "vendorName": "IBM Cloud",
+        "vendorAddress": "1 New Orchard Rd, Armonk, NY 10504, USA",
+        "vendorPhoneNumber": "+1-914-499-1900"
+    },
+    {
+        "vendorId": "ORA001",
+        "vendorName": "Oracle Cloud",
+        "vendorAddress": "500 Oracle Pkwy, Redwood City, CA 94065, USA",
+        "vendorPhoneNumber": "+1-650-506-7000"
+    }
+]

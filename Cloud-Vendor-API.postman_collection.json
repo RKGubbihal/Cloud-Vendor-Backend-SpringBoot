@@ -1,0 +1,138 @@
+{
+  "info": {
+    "name": "Cloud Vendor API",
+    "description": "Complete CRUD operations for Cloud Vendor management",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/cloudvendor/health",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "cloudvendor",
+            "health"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Create Vendor",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"vendorId\": \"AWS001\",\n    \"vendorName\": \"Amazon Web Services\",\n    \"vendorAddress\": \"410 Terry Ave N, Seattle, WA 98109, USA\",\n    \"vendorPhoneNumber\": \"+1-206-266-1000\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/cloudvendor",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "cloudvendor"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get All Vendors",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/cloudvendor",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "cloudvendor"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Vendor by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/cloudvendor/AWS001",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "cloudvendor",
+            "AWS001"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Update Vendor",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"vendorId\": \"AWS001\",\n    \"vendorName\": \"Amazon Web Services (Updated)\",\n    \"vendorAddress\": \"410 Terry Ave N, Seattle, WA 98109, USA\",\n    \"vendorPhoneNumber\": \"+1-206-266-2000\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/cloudvendor",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "cloudvendor"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Delete Vendor",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/cloudvendor/AWS001",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "cloudvendor",
+            "AWS001"
+          ]
+        }
+      }
+    }
+  ]
+}

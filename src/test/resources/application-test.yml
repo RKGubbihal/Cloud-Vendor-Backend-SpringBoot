@@ -1,0 +1,38 @@
+server:
+  port: 0
+
+spring:
+  application:
+    name: cloud-vendor-api-test
+  
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password: 
+    driver-class-name: org.h2.Driver
+  
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+        format_sql: true
+  
+  h2:
+    console:
+      enabled: true
+
+logging:
+  level:
+    com.example.cloudvendor: DEBUG
+    org.springframework.web: INFO
+    org.hibernate.SQL: DEBUG
+
+# Disable Swagger for tests
+springdoc:
+  swagger-ui:
+    enabled: false
+  api-docs:
+    enabled: false
