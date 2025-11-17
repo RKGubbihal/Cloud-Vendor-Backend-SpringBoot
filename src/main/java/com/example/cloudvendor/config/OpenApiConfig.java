@@ -5,6 +5,8 @@ import io.swagger.v3.oas.models.info.Contact;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.info.License;
 import io.swagger.v3.oas.models.servers.Server;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -13,8 +15,11 @@ import java.util.List;
 @Configuration
 public class OpenApiConfig {
 
+    private static final Logger logger = LoggerFactory.getLogger(OpenApiConfig.class);
+
     @Bean
     public OpenAPI customOpenAPI() {
+        logger.info("Initializing OpenAPI configuration");
         return new OpenAPI()
                 .servers(List.of(
                         new Server().url("http://localhost:8080").description("Development Server")

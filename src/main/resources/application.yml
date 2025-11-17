@@ -1,16 +1,18 @@
 server:
-  port: 8080
+  port: 9090
+  #port: 8080
 
 spring:
   application:
     name: cloud-vendor-api
   
   datasource:
-    url: jdbc:mysql://localhost:3306/cloudvendor_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://localhost:3306/vendor_mgmt_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
     username: root
     password: MySQLhandson#2023
     driver-class-name: com.mysql.cj.jdbc.Driver
-  
+    #url: jdbc:mysql://localhost:3306/cloudvendor_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
+
   jpa:
     hibernate:
       ddl-auto: update
@@ -25,10 +27,14 @@ spring:
       mode: always
 
 logging:
+  config: classpath:logback-spring.xml
+  file:
+    name: logs/cloud-vendor-api.log
   level:
     com.example.cloudvendor: DEBUG
     org.springframework.web: DEBUG
     org.hibernate.SQL: DEBUG
+    root: INFO
 
 # OpenAPI/Swagger Configuration
 springdoc:

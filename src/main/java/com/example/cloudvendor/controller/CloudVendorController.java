@@ -11,6 +11,8 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -24,6 +26,7 @@ import java.util.List;
 @Tag(name = "Cloud Vendor Management", description = "APIs for managing cloud vendors")
 public class CloudVendorController {
     
+    private static final Logger logger = LoggerFactory.getLogger(CloudVendorController.class);
     private final CloudVendorService cloudVendorService;
     
     @Operation(
@@ -49,10 +52,13 @@ public class CloudVendorController {
     public ResponseEntity<?> createVendor(
             @Parameter(description = "Cloud vendor details to create", required = true)
             @Valid @RequestBody CloudVendor cloudVendor) {
+        logger.info("POST /cloudvendor - Creating new cloud vendor with ID: {}", cloudVendor.getVendorId());
         try {
             CloudVendor createdVendor = cloudVendorService.createVendor(cloudVendor);
+            logger.info("Successfully created cloud vendor with ID: {}", createdVendor.getVendorId());
             return new ResponseEntity<>(createdVendor, HttpStatus.CREATED);
         } catch (RuntimeException e) {
+            logger.error("Error creating cloud vendor with ID: {} - {}", cloudVendor.getVendorId(), e.getMessage());
             return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
         }
     }
@@ -80,10 +86,13 @@ public class CloudVendorController {
     public ResponseEntity<?> getVendorById(
             @Parameter(description = "Unique identifier of the cloud vendor", required = true, example = "V001")
             @PathVariable String vendorId) {
+        logger.info("GET /cloudvendor/{} - Retrieving cloud vendor by ID", vendorId);
         try {
             CloudVendor vendor = cloudVendorService.getVendorById(vendorId);
+            logger.info("Successfully retrieved cloud vendor with ID: {}", vendorId);
             return new ResponseEntity<>(vendor, HttpStatus.OK);
         } catch (RuntimeException e) {
+            logger.error("Error retrieving cloud vendor with ID: {} - {}", vendorId, e.getMessage());
             return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
         }
     }
@@ -109,10 +118,13 @@ public class CloudVendorController {
     })
     @GetMapping
     public ResponseEntity<?> getAllVendors() {
+        logger.info("GET /cloudvendor - Retrieving all cloud vendors");
         try {
             List<CloudVendor> vendors = cloudVendorService.getAllVendors();
+            logger.info("Successfully retrieved {} cloud vendor(s)", vendors.size());
             return new ResponseEntity<>(vendors, HttpStatus.OK);
         } catch (RuntimeException e) {
+            logger.error("Error retrieving all cloud vendors - {}", e.getMessage());
             return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
         }
     }
@@ -145,10 +157,13 @@ public class CloudVendorController {
     public ResponseEntity<?> updateVendor(
             @Parameter(description = "Updated cloud vendor details", required = true)
             @Valid @RequestBody CloudVendor cloudVendor) {
+        logger.info("PUT /cloudvendor - Updating cloud vendor with ID: {}", cloudVendor.getVendorId());
         try {
             CloudVendor updatedVendor = cloudVendorService.updateVendor(cloudVendor);
+            logger.info("Successfully updated cloud vendor with ID: {}", updatedVendor.getVendorId());
             return new ResponseEntity<>(updatedVendor, HttpStatus.OK);
         } catch (RuntimeException e) {
+            logger.error("Error updating cloud vendor with ID: {} - {}", cloudVendor.getVendorId(), e.getMessage());
             return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
         }
     }
@@ -173,10 +188,13 @@ public class CloudVendorController {
     public ResponseEntity<?> deleteVendor(
             @Parameter(description = "Unique identifier of the cloud vendor to delete", required = true, example = "V001")
             @PathVariable String vendorId) {
+        logger.info("DELETE /cloudvendor/{} - Deleting cloud vendor by ID", vendorId);
         try {
             String message = cloudVendorService.deleteVendor(vendorId);
+            logger.info("Successfully deleted cloud vendor with ID: {}", vendorId);
             return new ResponseEntity<>(message, HttpStatus.OK);
         } catch (RuntimeException e) {
+            logger.error("Error deleting cloud vendor with ID: {} - {}", vendorId, e.getMessage());
             return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
         }
     }
@@ -194,6 +212,7 @@ public class CloudVendorController {
     })
     @GetMapping("/health")
     public ResponseEntity<String> healthCheck() {
+        logger.debug("GET /cloudvendor/health - Health check endpoint called");
         return new ResponseEntity<>("Cloud Vendor API is running successfully!", HttpStatus.OK);
     }
 }
