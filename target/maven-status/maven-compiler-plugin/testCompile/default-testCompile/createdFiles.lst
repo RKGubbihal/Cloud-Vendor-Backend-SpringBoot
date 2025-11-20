@@ -1,2 +1,6 @@
+com\example\cloudvendor\controller\CloudVendorControllerTest.class
+com\example\cloudvendor\integration\CloudVendorIntegrationTest.class
 com\example\cloudvendor\TestDataFactory.class
+com\example\cloudvendor\service\CloudVendorServiceImplTest.class
 com\example\cloudvendor\TestDataFactory$Constants.class
+com\example\cloudvendor\repository\CloudVendorRepositoryTest.class
