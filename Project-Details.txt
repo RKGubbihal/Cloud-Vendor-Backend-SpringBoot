@@ -1,0 +1,31 @@
+  Details_around 9.40pm_11/20/2025
+------------------------------------------------------
+Project Name:
+		cloud-vendor-api
+POM File Details:
+		<artifactId>cloud-vendor-api</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<name>cloud-vendor-api</name>
+
+
+ GitHub:
+-------------
+Existing Repo Name:
+				Cloud-Vendor-Backend-SpringBoot
+New/Future Repo Name:
+				Cloud-Vendor-SpringBoot-MySQL-K8S
+HTTPS URL:
+				https://github.com/RKGubbihal/Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube.git
+
+
+
+  Local (IntelliJ):
+-----------------------
+Existing:
+	Project Folder:
+				C:\Users\radha\Downloads\NewProj\Cloud-Vendor-SpringBoot-MySQL-K8S
+
+New/Future:
+	Project Folder:
+			C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube
+														  Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube
