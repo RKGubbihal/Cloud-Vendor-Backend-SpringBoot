@@ -1,148 +1,173 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-   File Name: Cloud-Vendor-SpringBoot-MySQL-K8S
----------------------------------------------------------------------------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-minikube start
-
-PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube> minikube start
-* minikube v1.37.0 on Microsoft Windows 11 Home 10.0.26200.7171 Build 26200.7171
-* Using the docker driver based on existing profile
-* Starting "minikube" primary control-plane node in "minikube" cluster
-* Pulling base image v0.0.48 ...
-* Restarting existing docker container for "minikube" ...
-! Failing to connect to https://registry.k8s.io/ from both inside the minikube container and host machine
-* To pull new external images, you may need to configure a proxy: https://minikube.sigs.k8s.io/docs/reference/networking/proxy/
-* Preparing Kubernetes v1.34.0 on Docker 28.4.0 ...
-* Verifying Kubernetes components...
-  - Using image docker.io/kubernetesui/dashboard:v2.7.0
-  - Using image docker.io/kubernetesui/metrics-scraper:v1.0.8
-  - Using image gcr.io/k8s-minikube/storage-provisioner:v5
-* Some dashboard features require the metrics-server addon. To enable all features please run:
-
-        minikube addons enable metrics-server
-
-* Enabled addons: default-storageclass, storage-provisioner, dashboard
-* Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
+PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube> minikube -p minikube docker-env --shell powershell | Invoke-Expression
+PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube> docker images
+REPOSITORY                                TAG       IMAGE ID       CREATED             SIZE
+cloud-vendor-springboot-minikube          5.0       b32601503c76   About an hour ago   318MB
+registry.k8s.io/kube-apiserver            v1.34.0   90550c43ad2b   3 months ago        88MB
+registry.k8s.io/kube-controller-manager   v1.34.0   a0af72f2ec6d   3 months ago        74.9MB
+registry.k8s.io/kube-proxy                v1.34.0   df0860106674   3 months ago        71.9MB
+registry.k8s.io/kube-scheduler            v1.34.0   46169d968e92   3 months ago        52.8MB
+registry.k8s.io/etcd                      3.6.4-0   5f1f5298c888   4 months ago        195MB
+registry.k8s.io/pause                     3.10.1    cd073f4c5f6a   5 months ago        736kB
+registry.k8s.io/coredns/coredns           v1.12.1   52546a367cc9   8 months ago        75MB
+mysql                                     5.7       5107333e08a8   23 months ago       501MB
+kubernetesui/dashboard                    <none>    07655ddf2eeb   3 years ago         246MB
+kubernetesui/metrics-scraper              <none>    115053965e86   3 years ago         43.8MB
+gcr.io/k8s-minikube/storage-provisioner   v5        6e38f40d628d   4 years ago         31.5MB
+PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube> minikube image ls
+registry.k8s.io/pause:3.10.1
+registry.k8s.io/kube-scheduler:v1.34.0
+registry.k8s.io/kube-proxy:v1.34.0
+registry.k8s.io/kube-controller-manager:v1.34.0
+registry.k8s.io/kube-apiserver:v1.34.0
+registry.k8s.io/etcd:3.6.4-0
+registry.k8s.io/coredns/coredns:v1.12.1
+gcr.io/k8s-minikube/storage-provisioner:v5
+docker.io/library/mysql:5.7
+docker.io/library/cloud-vendor-springboot-minikube:5.0
+docker.io/kubernetesui/metrics-scraper:<none>
+docker.io/kubernetesui/dashboard:<none>
+PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube> minikube image ls | findstr cloud-vendor-springboot-minikube
+docker.io/library/cloud-vendor-springboot-minikube:5.0
 PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-Make the image available to Minikube
-✅ Option A (easiest): Load your local image into Minikube
-	If you already built the image locally:
-	docker images | findstr springboot-k8s-image:1.0
+PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube> docker build -t cloud-vendor-springboot-minikube:6.0 .
+[+] Building 1.0s (21/21) FINISHED                                                                                                                                   docker:default
+ => [internal] load build definition from Dockerfile                                                                                                                           0.0s
+ => => transferring dockerfile: 1.35kB                                                                                                                                         0.0s
+ => [internal] load metadata for docker.io/library/eclipse-temurin:21-jre-alpine                                                                                               0.8s
+ => [internal] load metadata for docker.io/library/maven:3.9.9-eclipse-temurin-21                                                                                              0.8s
+ => [auth] library/eclipse-temurin:pull token for registry-1.docker.io                                                                                                         0.0s
+ => [auth] library/maven:pull token for registry-1.docker.io                                                                                                                   0.0s
+ => [internal] load .dockerignore                                                                                                                                              0.0s
+ => => transferring context: 613B                                                                                                                                              0.0s
+ => [build 1/6] FROM docker.io/library/maven:3.9.9-eclipse-temurin-21@sha256:3a4ab3276a087bf276f79cae96b1af04f53731bec53fb2e651aca79e4b10211e                                  0.0s
+ => [internal] load build context                                                                                                                                              0.0s
+ => => transferring context: 1.43kB                                                                                                                                            0.0s
+ => [stage-1 1/7] FROM docker.io/library/eclipse-temurin:21-jre-alpine@sha256:326837fba06a8ff5482a17bafbd65319e64a6e997febb7c85ebe7e3f73c12b11                                 0.0s
+ => CACHED [stage-1 2/7] WORKDIR /app                                                                                                                                          0.0s
+ => CACHED [stage-1 3/7] RUN apk add --no-cache wget                                                                                                                           0.0s
+ => CACHED [stage-1 4/7] RUN addgroup -S spring && adduser -S spring -G spring                                                                                                 0.0s
+ => CACHED [stage-1 5/7] RUN mkdir -p /app/logs && chown -R spring:spring /app                                                                                                 0.0s
+ => CACHED [build 2/6] WORKDIR /app                                                                                                                                            0.0s
+ => CACHED [build 3/6] COPY pom.xml .                                                                                                                                          0.0s
+ => CACHED [build 4/6] RUN mvn dependency:go-offline -B                                                                                                                        0.0s
+ => CACHED [build 5/6] COPY src ./src                                                                                                                                          0.0s
+ => CACHED [build 6/6] RUN mvn clean package -DskipTests                                                                                                                       0.0s
+ => CACHED [stage-1 6/7] COPY --from=build /app/target/cloud-vendor-api-v1.0.jar app.jar                                                                                       0.0s
+ => CACHED [stage-1 7/7] RUN chown spring:spring app.jar                                                                                                                       0.0s
+ => exporting to image                                                                                                                                                         0.0s
+ => => exporting layers                                                                                                                                                        0.0s
+ => => writing image sha256:f528006cbf214606b7eaf88ae881cac68c1aa99a5b68c4b5570fafdf87532c7d                                                                                   0.0s
+ => => naming to docker.io/library/cloud-vendor-springboot-minikube:6.0                                                                                                        0.0s
+PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
+PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube> minikube image ls | findstr cloud-vendor-springboot-minikube
+docker.io/library/cloud-vendor-springboot-minikube:6.0
+docker.io/library/cloud-vendor-springboot-minikube:5.0
+PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
+kubectl apply -f mysql-configMap.yaml
+				 mysql-configMap
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
+PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube> kubectl apply -f mysql-configMap.yaml
+configmap/db-config created
+PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube> kubectl get configmap
+NAME               DATA   AGE
+db-config          2      21s
+kube-root-ca.crt   1      10d
+PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
+kubectl apply -f mysql-secrets.yaml
 
-	Then load it into Minikube:
-	minikube image load springboot-k8s-image:1.0
+kubectl get secrets
 
-	Check inside Minikube:
-	minikube image ls | findstr springboot-k8s-image:1.0
 
-PS C:\Users\radha\Downloads\Temp> docker images | findstr springboot-k8s-image:1.0
-PS C:\Users\radha\Downloads\Temp> minikube image load springboot-k8s-image:1.0
-PS C:\Users\radha\Downloads\Temp> minikube image ls | findstr springboot-k8s-image:1.0
-docker.io/library/springboot-k8s-image:1.0
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-Option B: Build the image directly inside Minikube’s Docker
+PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube> kubectl apply -f mysql-secrets.yaml
+secret/mysql-secrets created
 
-Alternative approach (also very common):
-
-In PowerShell:
-minikube -p minikube docker-env --shell powershell | Invoke-Expression
-		docker build -t my-springboot-k8y:1.0 .
-
-Now the image is built inside Minikube’s Docker daemon, so Kubernetes can pull it directly.
-
-You can check:
-docker images | findstr my-springboot-k8y
-
-If you later open a new PowerShell window, you must run the docker-env command again in that window.
+PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube> kubectl get secrets
+NAME            TYPE     DATA   AGE
+mysql-secrets   Opaque   2      29s
+PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-minikube image ls
-docker images
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-docker rm <container>
-
-	docker run -d --name my-springboot-container -p 9010:9010 my-springboot-app:1.0
-	Final-Good
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-docker run -d --name springboot-k8s-image-container -p 9010:9010 springboot-k8s-image:1.0
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-docker ps
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-http://localhost:9010/message
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-docker rmi <image>
-docker rmi
-	docker rmi my-springboot-app springboot-k8s-demo springboot-k8s-demo springboot-k8s-demo cloud-vendor-api
-	docker rmi my-springboot-app:1.0
-
-docker rmi cloud-vendor-apm:1.0
-docker rmi springboot-k8s-example:1.0
-docker rmi mysql:latest
-docker rmi mysql:5.7
-
-docker rmi springboot-k8s-example:1.0 mysql:latest mysql:5.7
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube> docker rmi mysql:5.7
-Error response from daemon: conflict: unable to remove repository reference "mysql:5.7" (must force) - container e19b59661734 is using its referenced image 5107333e08a
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-docker rm <container>
-docker rm e19b59661734
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-kubectl apply -f db-deployment.yaml
-PS C:\Users\radha\Downloads\Temp2> kubectl apply -f db-deployment.yaml
+PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube> kubectl apply -f db-deployment.yaml
 persistentvolumeclaim/mysql-pv-claim unchanged
 deployment.apps/mysql created
 Warning: spec.SessionAffinity is ignored for headless services
 service/mysql created
-PS C:\Users\radha\Downloads\Temp2>
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-kubectl get deployment
-
-PS C:\Users\radha\Downloads\Temp2> kubectl get deployment
+PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube> kubectl get deployments
 NAME    READY   UP-TO-DATE   AVAILABLE   AGE
-mysql   1/1     1            1           28s
-
-PS C:\Users\radha\Downloads\Temp2> kubectl get pods
+mysql   1/1     1            1           66s
+PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube> kubectl get service
+NAME         TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)    AGE
+kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP    10d
+mysql        ClusterIP   None         <none>        3306/TCP   74s
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
+kubectl exec -it mysql-549f77bfd5-zbcgz -- /bin/bash
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
+PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube> kubectl get pods
 NAME                     READY   STATUS    RESTARTS   AGE
-mysql-69cd976f58-kfnwn   1/1     Running   0          44s
-PS C:\Users\radha\Downloads\Temp2>
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-kubectl get Service
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-kubectl get pods
-
-PS C:\Users\radha\Downloads\Temp2> kubectl get pods
-NAME                     READY   STATUS    RESTARTS   AGE
-mysql-69cd976f58-kfnwn   1/1     Running   0          2m54s
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-kubectl exec -it mysql-69cd976f58-77b8q -- /bin/bash
-mysql -h mysql -u root -p
-
-kubectl exec -it mysql-69cd976f58-kfnwn -- /bin/bash
-mysql -h mysql -u root -p
-
-PS C:\Users\radha\Downloads\Temp2> kubectl exec -it mysql-69cd976f58-kfnwn -- /bin/bash
+mysql-549f77bfd5-zbcgz   1/1     Running   0          2m36s
+PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube> kubectl logs mysql-549f77bfd5-zbcgz
+2025-11-29 20:18:59+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 5.7.44-1.el7 started.
+2025-11-29 20:18:59+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+2025-11-29 20:18:59+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 5.7.44-1.el7 started.
+'/var/lib/mysql/mysql.sock' -> '/var/run/mysqld/mysqld.sock'
+2025-11-29T20:19:00.060296Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2025-11-29T20:19:00.062567Z 0 [Note] mysqld (mysqld 5.7.44) starting as process 1 ...
+2025-11-29T20:19:00.068197Z 0 [Note] InnoDB: PUNCH HOLE support available
+2025-11-29T20:19:00.068255Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2025-11-29T20:19:00.068260Z 0 [Note] InnoDB: Uses event mutexes
+2025-11-29T20:19:00.068261Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2025-11-29T20:19:00.068263Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.13
+2025-11-29T20:19:00.068265Z 0 [Note] InnoDB: Using Linux native AIO
+2025-11-29T20:19:00.069152Z 0 [Note] InnoDB: Number of pools: 1
+2025-11-29T20:19:00.069795Z 0 [Note] InnoDB: Using CPU crc32 instructions
+2025-11-29T20:19:00.073391Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2025-11-29T20:19:00.122843Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2025-11-29T20:19:00.145460Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+2025-11-29T20:19:00.184230Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2025-11-29T20:19:00.219558Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2025-11-29T20:19:00.219666Z 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2025-11-29T20:19:00.308522Z 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+2025-11-29T20:19:00.309288Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2025-11-29T20:19:00.309313Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2025-11-29T20:19:00.318668Z 0 [Note] InnoDB: 5.7.44 started; log sequence number 12228069
+2025-11-29T20:19:00.326568Z 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool
+2025-11-29T20:19:00.327486Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2025-11-29T20:19:00.339152Z 0 [Note] InnoDB: Buffer pool(s) load completed at 251129 20:19:00
+2025-11-29T20:19:00.362136Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+2025-11-29T20:19:00.362200Z 0 [Note] Skipping generation of SSL certificates as certificate files are present in data directory.
+2025-11-29T20:19:00.362205Z 0 [Warning] A deprecated TLS version TLSv1 is enabled. Please use TLSv1.2 or higher.
+2025-11-29T20:19:00.362206Z 0 [Warning] A deprecated TLS version TLSv1.1 is enabled. Please use TLSv1.2 or higher.
+2025-11-29T20:19:00.364509Z 0 [Warning] CA certificate ca.pem is self signed.
+2025-11-29T20:19:00.364754Z 0 [Note] Skipping generation of RSA key pair as key files are present in data directory.
+2025-11-29T20:19:00.365116Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+2025-11-29T20:19:00.365327Z 0 [Note] IPv6 is available.
+2025-11-29T20:19:00.365408Z 0 [Note]   - '::' resolves to '::';
+2025-11-29T20:19:00.365478Z 0 [Note] Server socket created on IP: '::'.
+2025-11-29T20:19:00.369151Z 0 [Warning] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2025-11-29T20:19:00.391550Z 0 [Note] Event Scheduler: Loaded 0 events
+2025-11-29T20:19:00.392331Z 0 [Note] mysqld: ready for connections.
+Version: '5.7.44'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server (GPL)
+PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube> kubectl exec -it mysql-549f77bfd5-zbcgz -- /bin/bash
 bash-4.2# mysql -h mysql -u root -p
 Enter password:
-ERROR 1045 (28000): Access denied for user 'root'@'10.244.0.30' (using password: YES)
+ERROR 1045 (28000): Access denied for user 'root'@'10.244.0.62' (using password: YES)
 bash-4.2# mysql -h mysql -u root -p
-Enter password:
-ERROR 1045 (28000): Access denied for user 'root'@'10.244.0.30' (using password: YES)
-bash-4.2# mysql -h mysql -u root -p    ====> Password: root
 Enter password:
 Welcome to the MySQL monitor.  Commands end with ; or \g.
-Your MySQL connection id is 4
+Your MySQL connection id is 3
 Server version: 5.7.44 MySQL Community Server (GPL)
 
 Copyright (c) 2000, 2023, Oracle and/or its affiliates.
@@ -153,12 +178,7 @@ owners.
 
 Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 
-mysql>
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-show databases;
-
 mysql> show databases;
-
 +--------------------+
 | Database           |
 +--------------------+
@@ -168,320 +188,26 @@ mysql> show databases;
 | performance_schema |
 | sys                |
 +--------------------+
-5 rows in set (0.00 sec)
+5 rows in set (0.01 sec)
+
+mysql> use javatechie;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show tables;
++----------------------+
+| Tables_in_javatechie |
++----------------------+
+| cloud_vendor         |
++----------------------+
+1 row in set (0.00 sec)
 
 mysql>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-mysql> use javatechie;
-Database changed
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-kubectl delete service mysql
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-kubectl delete deployment mysql
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-cloud-vendor-api-v1.0.jar
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-http://localhost:9090/cloudvendor/health
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-  Docker File Details:
------------------------------
-# Use a stable, official JDK/JRE base image
-FROM eclipse-temurin:21-jre-alpine
-
-# Set the working directory in the container
-WORKDIR /app
-
-# Copy the fat jar from the target folder into the container
-ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} springboot-k8s-demo.jar
-
-# Expose the port your Spring Boot app runs on
-EXPOSE 9010
-
-# Default command
-ENTRYPOINT ["java", "-jar", "/app/springboot-k8s-demo.jar"]
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube
-
-	docker build -t cloud-vendor-springboot-mySQL-K8S-Minikube:1.0 .
-	docker build -t springboot-crud-k8s:3.0 .
-docker build -t Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube:5.0 .
-docker build -t cloud-vendor-springBoot-minikube:5.0 .
-
-PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube> docker images
-REPOSITORY                                TAG       IMAGE ID       CREATED          SIZE
-cloud-vendor-springboot-minikube          5.0       b32601503c76   33 seconds ago   318MB
-registry.k8s.io/kube-apiserver            v1.34.0   90550c43ad2b   3 months ago     88MB
-registry.k8s.io/kube-controller-manager   v1.34.0   a0af72f2ec6d   3 months ago     74.9MB
-registry.k8s.io/kube-proxy                v1.34.0   df0860106674   3 months ago     71.9MB
-registry.k8s.io/kube-scheduler            v1.34.0   46169d968e92   3 months ago     52.8MB
-registry.k8s.io/etcd                      3.6.4-0   5f1f5298c888   4 months ago     195MB
-registry.k8s.io/pause                     3.10.1    cd073f4c5f6a   5 months ago     736kB
-registry.k8s.io/coredns/coredns           v1.12.1   52546a367cc9   8 months ago     75MB
-mysql                                     5.7       5107333e08a8   23 months ago    501MB
-kubernetesui/dashboard                    <none>    07655ddf2eeb   3 years ago      246MB
-kubernetesui/metrics-scraper              <none>    115053965e86   3 years ago      43.8MB
-gcr.io/k8s-minikube/storage-provisioner   v5        6e38f40d628d   4 years ago      31.5MB
-PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube>
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-docker images | findstr cloud-vendor-springboot-minikube:5.0
-
-	Then load it into Minikube:
-	minikube image load springboot-k8s-image:1.0
-
-	Check inside Minikube:
-minikube image ls | findstr cloud-vendor-springboot-minikube:5.0
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube> docker images | findstr cloud-vendor-springboot-minikube:5.0
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube> docker images
-REPOSITORY                                TAG       IMAGE ID       CREATED         SIZE
-cloud-vendor-springboot-minikube          5.0       b32601503c76   2 minutes ago   318MB
-registry.k8s.io/kube-apiserver            v1.34.0   90550c43ad2b   3 months ago    88MB
-registry.k8s.io/kube-scheduler            v1.34.0   46169d968e92   3 months ago    52.8MB
-registry.k8s.io/kube-proxy                v1.34.0   df0860106674   3 months ago    71.9MB
-registry.k8s.io/kube-controller-manager   v1.34.0   a0af72f2ec6d   3 months ago    74.9MB
-registry.k8s.io/etcd                      3.6.4-0   5f1f5298c888   4 months ago    195MB
-registry.k8s.io/pause                     3.10.1    cd073f4c5f6a   5 months ago    736kB
-registry.k8s.io/coredns/coredns           v1.12.1   52546a367cc9   8 months ago    75MB
-mysql                                     5.7       5107333e08a8   23 months ago   501MB
-kubernetesui/dashboard                    <none>    07655ddf2eeb   3 years ago     246MB
-kubernetesui/metrics-scraper              <none>    115053965e86   3 years ago     43.8MB
-gcr.io/k8s-minikube/storage-provisioner   v5        6e38f40d628d   4 years ago     31.5MB
-PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube> minikube image ls | findstr cloud-vendor-springboot-minikube:5.0
-docker.io/library/cloud-vendor-springboot-minikube:5.0
-PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube>
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-kind: Deployment
-metadata:
-  name: springboot-crud-deployment
-
-kind: Service
-metadata: # Metadata of the resource kind we are creating
-  name: springboot-crud-svc
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-# Copy the fat jar from the target folder into the container
-ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} cloud-vendor-api-0.0.1-SNAPSHOT.jar
-
-cloud-vendor-api-0.0.1-SNAPSHOT.jar
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-docker build -t cloud-vendor-api:1.0 .
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-springboot-crud-k8s
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-    <artifactId>springboot-crud-k8s</artifactId>
-    <version>1.0</version>
-    <name>springboot-crud-k8s</name>
-
-	ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} springboot-crud-k8s-1.0.jar
-
-# Expose the port your Spring Boot app runs on
-EXPOSE 9011
-
-# Default command
-ENTRYPOINT ["java", "-jar", "/app/springboot-crud-k8s-1.0.jar"]
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-docker build -t springboot-crud-k8s:1.0 .
-
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-docker build -t cloud-vendor-api:1.0 .
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-PS C:\Users\radha\Downloads\NewProj\GitPull> docker images
-REPOSITORY                    TAG       IMAGE ID       CREATED        SIZE
-cloud-vendor-api              1.0       18e8a2c428da   3 days ago     466MB
-gcr.io/k8s-minikube/kicbase   v0.0.48   41454ef774d0   2 months ago   1.84GB
-gcr.io/k8s-minikube/kicbase   <none>    7171c97a5162   2 months ago   1.84GB
-PS C:\Users\radha\Downloads\NewProj\GitPull>
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube
-	docker build -t cloud-vendor-springboot-mySQL-K8S-Minikube:1.0 .
-docker build -t springboot-crud-k8s:3.0 .
-springboot-crud-k8s:3.0
-
-kind: Deployment
-metadata:
-  name: springboot-crud-deployment
-
-kind: Service
-metadata: # Metadata of the resource kind we are creating
-  name: springboot-crud-svc
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-app-deployment
-
-kubectl apply -f app-deployment.yaml
-
-PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube> kubectl apply -f app-deployment.yaml
-deployment.apps/springboot-crud-deployment created
-service/springboot-crud-svc created
-
-			PS C:\Users\radha\Downloads\NewProj\GitPull> kubectl apply -f app-deployment.yaml
-			deployment.apps/springboot-crud-deployment created
-			service/springboot-crud-svc created
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-kubectl get deployment
-
-
-kubectl get service
-
-kubectl get pods
-
-
-PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube> kubectl apply -f app-deployment.yaml
-deployment.apps/springboot-crud-deployment created
-service/springboot-crud-svc created
-
-PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube> kubectl get deployment
-NAME                         READY   UP-TO-DATE   AVAILABLE   AGE
-mysql                        1/1     1            1           27m
-springboot-crud-deployment   3/3     3            3           26s
-
-
-PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube> kubectl get service
-NAME                  TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
-kubernetes            ClusterIP   10.96.0.1        <none>        443/TCP          10d
-mysql                 ClusterIP   None             <none>        3306/TCP         27m
-springboot-crud-svc   NodePort    10.111.142.238   <none>        9090:31369/TCP   32s
-
-PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube> kubectl get pods
-NAME                                          READY   STATUS    RESTARTS   AGE
-mysql-69cd976f58-77b8q                        1/1     Running   0          28m
-springboot-crud-deployment-66df9b5764-4hkbd   1/1     Running   0          49s
-springboot-crud-deployment-66df9b5764-s9drq   1/1     Running   0          49s
-springboot-crud-deployment-66df9b5764-wlmnb   1/1     Running   0          49s
-PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube>
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-kubectl get deployment
-kubectl get pods
-kubectl get service
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-	kubectl logs springboot-crud-deployment-67bb547f8c-254tj
-kubectl logs springboot-crud-deployment-66df9b5764-4hkbd
-
-
-PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube> kubectl logs springboot-crud-deployment-66df9b5764-4hkbd
-19:00:26.219 [main] INFO com.example.cloudvendor.CloudVendorApiApplication -- Starting Cloud Vendor API Application...
-
-  .   ____          _            __ _ _
- /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
- \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-  '  |____| .__|_| |_|_| |_\__, | / / / /
- =========|_|==============|___/=/_/_/_/
- :: Spring Boot ::                (v3.2.0)
-
-2025-11-29 19:00:35.712 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
-2025-11-29 19:00:37.204 [main] INFO  c.e.c.CloudVendorApiApplication - Starting CloudVendorApiApplication vv1.0 using Java 21.0.9 with PID 1 (/app/app.jar started by spring in /app)
-2025-11-29 19:00:37.207 [main] DEBUG c.e.c.CloudVendorApiApplication - Running with Spring Boot v3.2.0, Spring v6.1.1
-2025-11-29 19:00:37.209 [main] INFO  c.e.c.CloudVendorApiApplication - No active profile set, falling back to 1 default profile: "default"
-2025-11-29 19:00:51.403 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-11-29 19:00:51.702 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 285 ms. Found 1 JPA repository interface.
-2025-11-29 19:01:00.912 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
-2025-11-29 19:01:01.009 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
-2025-11-29 19:01:01.099 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-11-29 19:01:01.100 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
-2025-11-29 19:01:01.890 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-11-29 19:01:01.891 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 23482 ms
-2025-11-29 19:01:05.997 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-11-29 19:01:07.790 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
-2025-11-29 19:01:08.000 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-11-29 19:01:11.504 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-11-29 19:01:11.802 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-11-29 19:01:14.416 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5a466dd
-2025-11-29 19:01:14.493 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-11-29 19:01:14.813 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-11-29 19:01:18.514 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-11-29 19:01:18.806 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-11-29 19:01:26.589 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-11-29 19:01:28.899 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 14 mappings in 'requestMappingHandlerMapping'
-2025-11-29 19:01:30.710 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
-2025-11-29 19:01:32.288 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2025-11-29 19:01:33.194 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
-2025-11-29 19:01:34.912 [main] INFO  c.e.cloudvendor.config.OpenApiConfig - Initializing OpenAPI configuration
-2025-11-29 19:01:36.602 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
-2025-11-29 19:01:37.097 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9090 (http) with context path ''
-2025-11-29 19:01:37.602 [main] INFO  c.e.c.CloudVendorApiApplication - Started CloudVendorApiApplication in 67.393 seconds (process running for 75.011)
-2025-11-29 19:01:37.686 [main] INFO  c.e.c.CloudVendorApiApplication - =================================================
-2025-11-29 19:01:37.690 [main] INFO  c.e.c.CloudVendorApiApplication - 🚀 Cloud Vendor API Application Started Successfully!
-2025-11-29 19:01:37.692 [main] INFO  c.e.c.CloudVendorApiApplication - 📊 Server running on: http://localhost:8080
-2025-11-29 19:01:37.694 [main] INFO  c.e.c.CloudVendorApiApplication - 🔗 API Base URL: http://localhost:8080/cloudvendor
-2025-11-29 19:01:37.697 [main] INFO  c.e.c.CloudVendorApiApplication - 💾 Database: MySQL (cloudvendor_db)
-2025-11-29 19:01:37.698 [main] INFO  c.e.c.CloudVendorApiApplication - =================================================
-PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube>
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-PS C:\Users\radha\Downloads\NewProj\GitPull> kubectl get service
-NAME                  TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
-kubernetes            ClusterIP   10.96.0.1       <none>        443/TCP          28h
-mysql                 ClusterIP   None            <none>        3306/TCP         120m
-springboot-crud-svc   NodePort    10.106.158.92   <none>        9011:30800/TCP   99s
-PS C:\Users\radha\Downloads\NewProj\GitPull>
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-minikube service springboot-crud-svc --url
-			     springboot-crud-svc
-
-PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube> minikube service springboot-crud-svc --url
-http://127.0.0.1:59700
-! Because you are using a Docker driver on windows, the terminal needs to be open to run it.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-show tables;
-
-cloud_vendor
 select * from cloud_vendor;
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-mysql> use javatechie;
-Database changed
-mysql> show tables;
-+----------------------+
-| Tables_in_javatechie |
-+----------------------+
-| cloud_vendor         |
-+----------------------+
-1 row in set (0.01 sec)
 
-mysql> select * from cloud_vendor;
-+---------------+-----------------------------------------+---------------+---------------------+
-| vendor_id     | vendor_address                          | vendor_name   | vendor_phone_number |
-+---------------+-----------------------------------------+---------------+---------------------+
-| Krishna112233 | 410 Terry Ave N, Seattle, WA 98109, USA | AWS Developer | +1-323-203-6512     |
-+---------------+-----------------------------------------+---------------+---------------------+
-1 row in set (0.00 sec)
-
-mysql>
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-mysql> show tables;
-+----------------------+
-| Tables_in_javatechie |
-+----------------------+
-| cloud_vendor         |
-+----------------------+
-1 row in set (0.01 sec)
-
-mysql> select * from cloud_vendor;
-+---------------+-----------------------------------------+---------------+---------------------+
-| vendor_id     | vendor_address                          | vendor_name   | vendor_phone_number |
-+---------------+-----------------------------------------+---------------+---------------------+
-| Krishna112233 | 410 Terry Ave N, Seattle, WA 98109, USA | AWS Developer | +1-323-203-6512     |
-+---------------+-----------------------------------------+---------------+---------------------+
-1 row in set (0.00 sec)
 
 mysql> select * from cloud_vendor;
 +---------------+----------------------------------------------------+-----------------+---------------------+
@@ -490,7 +216,62 @@ mysql> select * from cloud_vendor;
 | Krishna112233 | 410 Terry Ave N, Seattle, WA 98109, USA            | AWS Developer   | +1-323-203-6512     |
 | Krishna225577 | 22130 Victory Blvd, Woodland Hills, CA, 91367, USA | DevOps Engineer | +1-323-203-6512     |
 +---------------+----------------------------------------------------+-----------------+---------------------+
-2 rows in set (0.01 sec)
+2 rows in set (0.00 sec)
+
+mysql>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
+minikube -p minikube docker-env --shell powershell | Invoke-Expression
+
+kubectl apply -f app-deployment.yaml
+
+
+kubectl get deployments
+
+kubectl get svc
+
+kubectl get pods
+
+PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube> kubectl apply -f app-deployment.yaml
+deployment.apps/springboot-crud-deployment created
+service/springboot-crud-svc created
+PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube> kubectl get deployments
+NAME                         READY   UP-TO-DATE   AVAILABLE   AGE
+mysql                        1/1     1            1           11m
+springboot-crud-deployment   3/3     3            3           45s
+PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube> kubectl get svc
+NAME                  TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
+kubernetes            ClusterIP   10.96.0.1       <none>        443/TCP          10d
+mysql                 ClusterIP   None            <none>        3306/TCP         11m
+springboot-crud-svc   NodePort    10.100.98.209   <none>        9090:32112/TCP   50s
+PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube> kubectl get pods
+NAME                                          READY   STATUS    RESTARTS   AGE
+mysql-549f77bfd5-zbcgz                        1/1     Running   0          11m
+springboot-crud-deployment-54ffddc9d5-ks4m4   1/1     Running   0          56s
+springboot-crud-deployment-54ffddc9d5-smglf   1/1     Running   0          56s
+springboot-crud-deployment-54ffddc9d5-vlb2p   1/1     Running   0          56s
+PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
+minikube service springboot-crud-svc --url
+                 springboot-crud-svc
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
+PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube> minikube service springboot-crud-svc --url
+http://127.0.0.1:61060
+! Because you are using a Docker driver on windows, the terminal needs to be open to run it.
+
+
+mysql> select * from cloud_vendor;
++---------------+----------------------------------------------------+-----------------+---------------------+
+| vendor_id     | vendor_address                                     | vendor_name     | vendor_phone_number |
++---------------+----------------------------------------------------+-----------------+---------------------+
+| Krishna112233 | 410 Terry Ave N, Seattle, WA 98109, USA            | AWS Developer   | +1-323-203-6512     |
+| Krishna225577 | 22130 Victory Blvd, Woodland Hills, CA, 91367, USA | DevOps Engineer | +1-323-203-6512     |
+| Reddy1122     | 22130 Victory Blvd, Woodland Hills, CA, 91367, USA | DevOps Engineer | +1-323-203-6512     |
++---------------+----------------------------------------------------+-----------------+---------------------+
+3 rows in set (0.00 sec)
 
 mysql>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
@@ -501,23 +282,6 @@ PS C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K
 * Verifying dashboard health ...
 * Launching proxy ...
 * Verifying proxy health ...
-* Opening http://127.0.0.1:61483/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/ in your default browser..
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-Project End....
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
-springboot-k8s-demo
-https://github.com/RKGubbihal/springboot-k8s-demo.git
-echo "# springboot-k8s-demo" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add originNew https://github.com/RKGubbihal/springboot-k8s-demo.git
-git push -u originNew main
-
-
-docker image prune -a
+* Opening http://127.0.0.1:56052/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/ in your default browser...
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SSS
