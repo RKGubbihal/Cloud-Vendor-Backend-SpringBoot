@@ -14,9 +14,9 @@ spec:
     spec:
       containers:
         - name: springboot-crud-k8s
-          image: cloud-vendor-apm:1.0
+          image: cloud-vendor-springboot-minikube:5.0
           ports:
-            - containerPort: 9011
+            - containerPort: 9090
           env:   # Setting Enviornmental Variables
             - name: DB_HOST   # Setting Database host address from configMap
               value: mysql
@@ -37,7 +37,7 @@ spec:
     app: springboot-k8s-mysql
   ports:
     - protocol: "TCP"
-      port: 9011 # The port that the service is running on in the cluster
-      targetPort: 9011 # The port exposed by the service
+      port: 9090 # The port that the service is running on in the cluster
+      targetPort: 9090 # The port exposed by the service
   type: NodePort # type of the service.
 

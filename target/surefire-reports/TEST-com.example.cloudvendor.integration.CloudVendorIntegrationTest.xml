@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.cloudvendor.integration.CloudVendorIntegrationTest" time="4.169" tests="11" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.cloudvendor.integration.CloudVendorIntegrationTest" time="4.906" tests="11" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\Users\radha\Downloads\NewProj\GitPull\target\test-classes;C:\Users\radha\Downloads\NewProj\GitPull\target\classes;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.2.0\spring-boot-starter-web-3.2.0.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-starter\3.2.0\spring-boot-starter-3.2.0.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot\3.2.0\spring-boot-3.2.0.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.2.0\spring-boot-autoconfigure-3.2.0.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.2.0\spring-boot-starter-logging-3.2.0.jar;C:\Users\radha\.m2\repository\ch\qos\logback\logback-classic\1.4.11\logback-classic-1.4.11.jar;C:\Users\radha\.m2\repository\ch\qos\logback\logback-core\1.4.11\logback-core-1.4.11.jar;C:\Users\radha\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.21.1\log4j-to-slf4j-2.21.1.jar;C:\Users\radha\.m2\repository\org\apache\logging\log4j\log4j-api\2.21.1\log4j-api-2.21.1.jar;C:\Users\radha\.m2\repository\org\slf4j\jul-to-slf4j\2.0.9\jul-to-slf4j-2.0.9.jar;C:\Users\radha\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\radha\.m2\repository\org\yaml\snakeyaml\2.2\snakeyaml-2.2.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.2.0\spring-boot-starter-json-3.2.0.jar;C:\Users\radha\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.15.3\jackson-databind-2.15.3.jar;C:\Users\radha\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.15.3\jackson-annotations-2.15.3.jar;C:\Users\radha\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.15.3\jackson-core-2.15.3.jar;C:\Users\radha\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.15.3\jackson-datatype-jdk8-2.15.3.jar;C:\Users\radha\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.15.3\jackson-datatype-jsr310-2.15.3.jar;C:\Users\radha\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.15.3\jackson-module-parameter-names-2.15.3.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.2.0\spring-boot-starter-tomcat-3.2.0.jar;C:\Users\radha\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.16\tomcat-embed-core-10.1.16.jar;C:\Users\radha\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.16\tomcat-embed-websocket-10.1.16.jar;C:\Users\radha\.m2\repository\org\springframework\spring-web\6.1.1\spring-web-6.1.1.jar;C:\Users\radha\.m2\repository\org\springframework\spring-beans\6.1.1\spring-beans-6.1.1.jar;C:\Users\radha\.m2\repository\io\micrometer\micrometer-observation\1.12.0\micrometer-observation-1.12.0.jar;C:\Users\radha\.m2\repository\io\micrometer\micrometer-commons\1.12.0\micrometer-commons-1.12.0.jar;C:\Users\radha\.m2\repository\org\springframework\spring-webmvc\6.1.1\spring-webmvc-6.1.1.jar;C:\Users\radha\.m2\repository\org\springframework\spring-aop\6.1.1\spring-aop-6.1.1.jar;C:\Users\radha\.m2\repository\org\springframework\spring-context\6.1.1\spring-context-6.1.1.jar;C:\Users\radha\.m2\repository\org\springframework\spring-expression\6.1.1\spring-expression-6.1.1.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\3.2.0\spring-boot-starter-data-jpa-3.2.0.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-starter-aop\3.2.0\spring-boot-starter-aop-3.2.0.jar;C:\Users\radha\.m2\repository\org\aspectj\aspectjweaver\1.9.20.1\aspectjweaver-1.9.20.1.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\3.2.0\spring-boot-starter-jdbc-3.2.0.jar;C:\Users\radha\.m2\repository\com\zaxxer\HikariCP\5.0.1\HikariCP-5.0.1.jar;C:\Users\radha\.m2\repository\org\springframework\spring-jdbc\6.1.1\spring-jdbc-6.1.1.jar;C:\Users\radha\.m2\repository\org\hibernate\orm\hibernate-core\6.3.1.Final\hibernate-core-6.3.1.Final.jar;C:\Users\radha\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\radha\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\radha\.m2\repository\org\jboss\logging\jboss-logging\3.5.3.Final\jboss-logging-3.5.3.Final.jar;C:\Users\radha\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.6.Final\hibernate-commons-annotations-6.0.6.Final.jar;C:\Users\radha\.m2\repository\io\smallrye\jandex\3.1.2\jandex-3.1.2.jar;C:\Users\radha\.m2\repository\com\fasterxml\classmate\1.6.0\classmate-1.6.0.jar;C:\Users\radha\.m2\repository\net\bytebuddy\byte-buddy\1.14.10\byte-buddy-1.14.10.jar;C:\Users\radha\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.4\jaxb-runtime-4.0.4.jar;C:\Users\radha\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.4\jaxb-core-4.0.4.jar;C:\Users\radha\.m2\repository\org\eclipse\angus\angus-activation\2.0.1\angus-activation-2.0.1.jar;C:\Users\radha\.m2\repository\org\glassfish\jaxb\txw2\4.0.4\txw2-4.0.4.jar;C:\Users\radha\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\radha\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\radha\.m2\repository\org\antlr\antlr4-runtime\4.10.1\antlr4-runtime-4.10.1.jar;C:\Users\radha\.m2\repository\org\springframework\data\spring-data-jpa\3.2.0\spring-data-jpa-3.2.0.jar;C:\Users\radha\.m2\repository\org\springframework\data\spring-data-commons\3.2.0\spring-data-commons-3.2.0.jar;C:\Users\radha\.m2\repository\org\springframework\spring-orm\6.1.1\spring-orm-6.1.1.jar;C:\Users\radha\.m2\repository\org\springframework\spring-tx\6.1.1\spring-tx-6.1.1.jar;C:\Users\radha\.m2\repository\org\slf4j\slf4j-api\2.0.9\slf4j-api-2.0.9.jar;C:\Users\radha\.m2\repository\org\springframework\spring-aspects\6.1.1\spring-aspects-6.1.1.jar;C:\Users\radha\.m2\repository\com\mysql\mysql-connector-j\8.1.0\mysql-connector-j-8.1.0.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-starter-validation\3.2.0\spring-boot-starter-validation-3.2.0.jar;C:\Users\radha\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.16\tomcat-embed-el-10.1.16.jar;C:\Users\radha\.m2\repository\org\hibernate\validator\hibernate-validator\8.0.1.Final\hibernate-validator-8.0.1.Final.jar;C:\Users\radha\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\radha\.m2\repository\org\projectlombok\lombok\1.18.30\lombok-1.18.30.jar;C:\Users\radha\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-ui\2.2.0\springdoc-openapi-starter-webmvc-ui-2.2.0.jar;C:\Users\radha\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-api\2.2.0\springdoc-openapi-starter-webmvc-api-2.2.0.jar;C:\Users\radha\.m2\repository\org\springdoc\springdoc-openapi-starter-common\2.2.0\springdoc-openapi-starter-common-2.2.0.jar;C:\Users\radha\.m2\repository\io\swagger\core\v3\swagger-core-jakarta\2.2.15\swagger-core-jakarta-2.2.15.jar;C:\Users\radha\.m2\repository\org\apache\commons\commons-lang3\3.13.0\commons-lang3-3.13.0.jar;C:\Users\radha\.m2\repository\io\swagger\core\v3\swagger-annotations-jakarta\2.2.15\swagger-annotations-jakarta-2.2.15.jar;C:\Users\radha\.m2\repository\io\swagger\core\v3\swagger-models-jakarta\2.2.15\swagger-models-jakarta-2.2.15.jar;C:\Users\radha\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.15.3\jackson-dataformat-yaml-2.15.3.jar;C:\Users\radha\.m2\repository\org\webjars\swagger-ui\5.2.0\swagger-ui-5.2.0.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.2.0\spring-boot-starter-test-3.2.0.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-test\3.2.0\spring-boot-test-3.2.0.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.2.0\spring-boot-test-autoconfigure-3.2.0.jar;C:\Users\radha\.m2\repository\com\jayway\jsonpath\json-path\2.8.0\json-path-2.8.0.jar;C:\Users\radha\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.1\jakarta.xml.bind-api-4.0.1.jar;C:\Users\radha\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.2\jakarta.activation-api-2.1.2.jar;C:\Users\radha\.m2\repository\net\minidev\json-smart\2.5.0\json-smart-2.5.0.jar;C:\Users\radha\.m2\repository\net\minidev\accessors-smart\2.5.0\accessors-smart-2.5.0.jar;C:\Users\radha\.m2\repository\org\ow2\asm\asm\9.3\asm-9.3.jar;C:\Users\radha\.m2\repository\org\assertj\assertj-core\3.24.2\assertj-core-3.24.2.jar;C:\Users\radha\.m2\repository\org\awaitility\awaitility\4.2.0\awaitility-4.2.0.jar;C:\Users\radha\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\radha\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.1\junit-jupiter-5.10.1.jar;C:\Users\radha\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.1\junit-jupiter-api-5.10.1.jar;C:\Users\radha\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\radha\.m2\repository\org\junit\platform\junit-platform-commons\1.10.1\junit-platform-commons-1.10.1.jar;C:\Users\radha\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\radha\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.1\junit-jupiter-params-5.10.1.jar;C:\Users\radha\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.1\junit-jupiter-engine-5.10.1.jar;C:\Users\radha\.m2\repository\org\junit\platform\junit-platform-engine\1.10.1\junit-platform-engine-1.10.1.jar;C:\Users\radha\.m2\repository\org\mockito\mockito-core\5.7.0\mockito-core-5.7.0.jar;C:\Users\radha\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.10\byte-buddy-agent-1.14.10.jar;C:\Users\radha\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\radha\.m2\repository\org\mockito\mockito-junit-jupiter\5.7.0\mockito-junit-jupiter-5.7.0.jar;C:\Users\radha\.m2\repository\org\skyscreamer\jsonassert\1.5.1\jsonassert-1.5.1.jar;C:\Users\radha\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\radha\.m2\repository\org\springframework\spring-core\6.1.1\spring-core-6.1.1.jar;C:\Users\radha\.m2\repository\org\springframework\spring-jcl\6.1.1\spring-jcl-6.1.1.jar;C:\Users\radha\.m2\repository\org\springframework\spring-test\6.1.1\spring-test-6.1.1.jar;C:\Users\radha\.m2\repository\org\xmlunit\xmlunit-core\2.9.1\xmlunit-core-2.9.1.jar;C:\Users\radha\.m2\repository\com\h2database\h2\2.2.224\h2-2.2.224.jar;C:\Users\radha\.m2\repository\org\testcontainers\junit-jupiter\1.19.3\junit-jupiter-1.19.3.jar;C:\Users\radha\.m2\repository\org\testcontainers\testcontainers\1.19.3\testcontainers-1.19.3.jar;C:\Users\radha\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\radha\.m2\repository\org\hamcrest\hamcrest-core\2.2\hamcrest-core-2.2.jar;C:\Users\radha\.m2\repository\org\apache\commons\commons-compress\1.24.0\commons-compress-1.24.0.jar;C:\Users\radha\.m2\repository\org\rnorth\duct-tape\duct-tape\1.0.8\duct-tape-1.0.8.jar;C:\Users\radha\.m2\repository\org\jetbrains\annotations\17.0.0\annotations-17.0.0.jar;C:\Users\radha\.m2\repository\com\github\docker-java\docker-java-api\3.3.4\docker-java-api-3.3.4.jar;C:\Users\radha\.m2\repository\com\github\docker-java\docker-java-transport-zerodep\3.3.4\docker-java-transport-zerodep-3.3.4.jar;C:\Users\radha\.m2\repository\com\github\docker-java\docker-java-transport\3.3.4\docker-java-transport-3.3.4.jar;C:\Users\radha\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\radha\.m2\repository\org\testcontainers\mysql\1.19.3\mysql-1.19.3.jar;C:\Users\radha\.m2\repository\org\testcontainers\jdbc\1.19.3\jdbc-1.19.3.jar;C:\Users\radha\.m2\repository\org\testcontainers\database-commons\1.19.3\database-commons-1.19.3.jar;"/>
+    <property name="java.class.path" value="C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube\target\test-classes;C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube\target\classes;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.2.0\spring-boot-starter-web-3.2.0.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-starter\3.2.0\spring-boot-starter-3.2.0.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot\3.2.0\spring-boot-3.2.0.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.2.0\spring-boot-autoconfigure-3.2.0.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.2.0\spring-boot-starter-logging-3.2.0.jar;C:\Users\radha\.m2\repository\ch\qos\logback\logback-classic\1.4.11\logback-classic-1.4.11.jar;C:\Users\radha\.m2\repository\ch\qos\logback\logback-core\1.4.11\logback-core-1.4.11.jar;C:\Users\radha\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.21.1\log4j-to-slf4j-2.21.1.jar;C:\Users\radha\.m2\repository\org\apache\logging\log4j\log4j-api\2.21.1\log4j-api-2.21.1.jar;C:\Users\radha\.m2\repository\org\slf4j\jul-to-slf4j\2.0.9\jul-to-slf4j-2.0.9.jar;C:\Users\radha\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\radha\.m2\repository\org\yaml\snakeyaml\2.2\snakeyaml-2.2.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.2.0\spring-boot-starter-json-3.2.0.jar;C:\Users\radha\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.15.3\jackson-databind-2.15.3.jar;C:\Users\radha\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.15.3\jackson-annotations-2.15.3.jar;C:\Users\radha\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.15.3\jackson-core-2.15.3.jar;C:\Users\radha\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.15.3\jackson-datatype-jdk8-2.15.3.jar;C:\Users\radha\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.15.3\jackson-datatype-jsr310-2.15.3.jar;C:\Users\radha\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.15.3\jackson-module-parameter-names-2.15.3.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.2.0\spring-boot-starter-tomcat-3.2.0.jar;C:\Users\radha\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.16\tomcat-embed-core-10.1.16.jar;C:\Users\radha\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.16\tomcat-embed-websocket-10.1.16.jar;C:\Users\radha\.m2\repository\org\springframework\spring-web\6.1.1\spring-web-6.1.1.jar;C:\Users\radha\.m2\repository\org\springframework\spring-beans\6.1.1\spring-beans-6.1.1.jar;C:\Users\radha\.m2\repository\io\micrometer\micrometer-observation\1.12.0\micrometer-observation-1.12.0.jar;C:\Users\radha\.m2\repository\io\micrometer\micrometer-commons\1.12.0\micrometer-commons-1.12.0.jar;C:\Users\radha\.m2\repository\org\springframework\spring-webmvc\6.1.1\spring-webmvc-6.1.1.jar;C:\Users\radha\.m2\repository\org\springframework\spring-aop\6.1.1\spring-aop-6.1.1.jar;C:\Users\radha\.m2\repository\org\springframework\spring-context\6.1.1\spring-context-6.1.1.jar;C:\Users\radha\.m2\repository\org\springframework\spring-expression\6.1.1\spring-expression-6.1.1.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\3.2.0\spring-boot-starter-data-jpa-3.2.0.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-starter-aop\3.2.0\spring-boot-starter-aop-3.2.0.jar;C:\Users\radha\.m2\repository\org\aspectj\aspectjweaver\1.9.20.1\aspectjweaver-1.9.20.1.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\3.2.0\spring-boot-starter-jdbc-3.2.0.jar;C:\Users\radha\.m2\repository\com\zaxxer\HikariCP\5.0.1\HikariCP-5.0.1.jar;C:\Users\radha\.m2\repository\org\springframework\spring-jdbc\6.1.1\spring-jdbc-6.1.1.jar;C:\Users\radha\.m2\repository\org\hibernate\orm\hibernate-core\6.3.1.Final\hibernate-core-6.3.1.Final.jar;C:\Users\radha\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\radha\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\radha\.m2\repository\org\jboss\logging\jboss-logging\3.5.3.Final\jboss-logging-3.5.3.Final.jar;C:\Users\radha\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.6.Final\hibernate-commons-annotations-6.0.6.Final.jar;C:\Users\radha\.m2\repository\io\smallrye\jandex\3.1.2\jandex-3.1.2.jar;C:\Users\radha\.m2\repository\com\fasterxml\classmate\1.6.0\classmate-1.6.0.jar;C:\Users\radha\.m2\repository\net\bytebuddy\byte-buddy\1.14.10\byte-buddy-1.14.10.jar;C:\Users\radha\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.4\jaxb-runtime-4.0.4.jar;C:\Users\radha\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.4\jaxb-core-4.0.4.jar;C:\Users\radha\.m2\repository\org\eclipse\angus\angus-activation\2.0.1\angus-activation-2.0.1.jar;C:\Users\radha\.m2\repository\org\glassfish\jaxb\txw2\4.0.4\txw2-4.0.4.jar;C:\Users\radha\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\radha\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\radha\.m2\repository\org\antlr\antlr4-runtime\4.10.1\antlr4-runtime-4.10.1.jar;C:\Users\radha\.m2\repository\org\springframework\data\spring-data-jpa\3.2.0\spring-data-jpa-3.2.0.jar;C:\Users\radha\.m2\repository\org\springframework\data\spring-data-commons\3.2.0\spring-data-commons-3.2.0.jar;C:\Users\radha\.m2\repository\org\springframework\spring-orm\6.1.1\spring-orm-6.1.1.jar;C:\Users\radha\.m2\repository\org\springframework\spring-tx\6.1.1\spring-tx-6.1.1.jar;C:\Users\radha\.m2\repository\org\slf4j\slf4j-api\2.0.9\slf4j-api-2.0.9.jar;C:\Users\radha\.m2\repository\org\springframework\spring-aspects\6.1.1\spring-aspects-6.1.1.jar;C:\Users\radha\.m2\repository\com\mysql\mysql-connector-j\8.1.0\mysql-connector-j-8.1.0.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-starter-validation\3.2.0\spring-boot-starter-validation-3.2.0.jar;C:\Users\radha\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.16\tomcat-embed-el-10.1.16.jar;C:\Users\radha\.m2\repository\org\hibernate\validator\hibernate-validator\8.0.1.Final\hibernate-validator-8.0.1.Final.jar;C:\Users\radha\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\radha\.m2\repository\org\projectlombok\lombok\1.18.30\lombok-1.18.30.jar;C:\Users\radha\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-ui\2.2.0\springdoc-openapi-starter-webmvc-ui-2.2.0.jar;C:\Users\radha\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-api\2.2.0\springdoc-openapi-starter-webmvc-api-2.2.0.jar;C:\Users\radha\.m2\repository\org\springdoc\springdoc-openapi-starter-common\2.2.0\springdoc-openapi-starter-common-2.2.0.jar;C:\Users\radha\.m2\repository\io\swagger\core\v3\swagger-core-jakarta\2.2.15\swagger-core-jakarta-2.2.15.jar;C:\Users\radha\.m2\repository\org\apache\commons\commons-lang3\3.13.0\commons-lang3-3.13.0.jar;C:\Users\radha\.m2\repository\io\swagger\core\v3\swagger-annotations-jakarta\2.2.15\swagger-annotations-jakarta-2.2.15.jar;C:\Users\radha\.m2\repository\io\swagger\core\v3\swagger-models-jakarta\2.2.15\swagger-models-jakarta-2.2.15.jar;C:\Users\radha\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.15.3\jackson-dataformat-yaml-2.15.3.jar;C:\Users\radha\.m2\repository\org\webjars\swagger-ui\5.2.0\swagger-ui-5.2.0.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.2.0\spring-boot-starter-test-3.2.0.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-test\3.2.0\spring-boot-test-3.2.0.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.2.0\spring-boot-test-autoconfigure-3.2.0.jar;C:\Users\radha\.m2\repository\com\jayway\jsonpath\json-path\2.8.0\json-path-2.8.0.jar;C:\Users\radha\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.1\jakarta.xml.bind-api-4.0.1.jar;C:\Users\radha\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.2\jakarta.activation-api-2.1.2.jar;C:\Users\radha\.m2\repository\net\minidev\json-smart\2.5.0\json-smart-2.5.0.jar;C:\Users\radha\.m2\repository\net\minidev\accessors-smart\2.5.0\accessors-smart-2.5.0.jar;C:\Users\radha\.m2\repository\org\ow2\asm\asm\9.3\asm-9.3.jar;C:\Users\radha\.m2\repository\org\assertj\assertj-core\3.24.2\assertj-core-3.24.2.jar;C:\Users\radha\.m2\repository\org\awaitility\awaitility\4.2.0\awaitility-4.2.0.jar;C:\Users\radha\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\radha\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.1\junit-jupiter-5.10.1.jar;C:\Users\radha\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.1\junit-jupiter-api-5.10.1.jar;C:\Users\radha\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\radha\.m2\repository\org\junit\platform\junit-platform-commons\1.10.1\junit-platform-commons-1.10.1.jar;C:\Users\radha\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\radha\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.1\junit-jupiter-params-5.10.1.jar;C:\Users\radha\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.1\junit-jupiter-engine-5.10.1.jar;C:\Users\radha\.m2\repository\org\junit\platform\junit-platform-engine\1.10.1\junit-platform-engine-1.10.1.jar;C:\Users\radha\.m2\repository\org\mockito\mockito-core\5.7.0\mockito-core-5.7.0.jar;C:\Users\radha\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.10\byte-buddy-agent-1.14.10.jar;C:\Users\radha\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\radha\.m2\repository\org\mockito\mockito-junit-jupiter\5.7.0\mockito-junit-jupiter-5.7.0.jar;C:\Users\radha\.m2\repository\org\skyscreamer\jsonassert\1.5.1\jsonassert-1.5.1.jar;C:\Users\radha\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\radha\.m2\repository\org\springframework\spring-core\6.1.1\spring-core-6.1.1.jar;C:\Users\radha\.m2\repository\org\springframework\spring-jcl\6.1.1\spring-jcl-6.1.1.jar;C:\Users\radha\.m2\repository\org\springframework\spring-test\6.1.1\spring-test-6.1.1.jar;C:\Users\radha\.m2\repository\org\xmlunit\xmlunit-core\2.9.1\xmlunit-core-2.9.1.jar;C:\Users\radha\.m2\repository\com\h2database\h2\2.2.224\h2-2.2.224.jar;C:\Users\radha\.m2\repository\org\testcontainers\junit-jupiter\1.19.3\junit-jupiter-1.19.3.jar;C:\Users\radha\.m2\repository\org\testcontainers\testcontainers\1.19.3\testcontainers-1.19.3.jar;C:\Users\radha\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\radha\.m2\repository\org\hamcrest\hamcrest-core\2.2\hamcrest-core-2.2.jar;C:\Users\radha\.m2\repository\org\apache\commons\commons-compress\1.24.0\commons-compress-1.24.0.jar;C:\Users\radha\.m2\repository\org\rnorth\duct-tape\duct-tape\1.0.8\duct-tape-1.0.8.jar;C:\Users\radha\.m2\repository\org\jetbrains\annotations\17.0.0\annotations-17.0.0.jar;C:\Users\radha\.m2\repository\com\github\docker-java\docker-java-api\3.3.4\docker-java-api-3.3.4.jar;C:\Users\radha\.m2\repository\com\github\docker-java\docker-java-transport-zerodep\3.3.4\docker-java-transport-zerodep-3.3.4.jar;C:\Users\radha\.m2\repository\com\github\docker-java\docker-java-transport\3.3.4\docker-java-transport-3.3.4.jar;C:\Users\radha\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\radha\.m2\repository\org\testcontainers\mysql\1.19.3\mysql-1.19.3.jar;C:\Users\radha\.m2\repository\org\testcontainers\jdbc\1.19.3\jdbc-1.19.3.jar;C:\Users\radha\.m2\repository\org\testcontainers\database-commons\1.19.3\database-commons-1.19.3.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -16,9 +16,9 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\radha\AppData\Local\Temp\surefire126657324555322743\surefirebooter-20251119220345327_3.jar C:\Users\radha\AppData\Local\Temp\surefire126657324555322743 2025-11-19T22-03-45_176-jvmRun1 surefire-20251119220345327_1tmp surefire_0-20251119220345327_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\radha\AppData\Local\Temp\surefire17984889784266331072\surefirebooter-20251129101354588_3.jar C:\Users\radha\AppData\Local\Temp\surefire17984889784266331072 2025-11-29T10-13-54_255-jvmRun1 surefire-20251129101354588_1tmp surefire_0-20251129101354588_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\Users\radha\Downloads\NewProj\GitPull\target\test-classes;C:\Users\radha\Downloads\NewProj\GitPull\target\classes;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.2.0\spring-boot-starter-web-3.2.0.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-starter\3.2.0\spring-boot-starter-3.2.0.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot\3.2.0\spring-boot-3.2.0.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.2.0\spring-boot-autoconfigure-3.2.0.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.2.0\spring-boot-starter-logging-3.2.0.jar;C:\Users\radha\.m2\repository\ch\qos\logback\logback-classic\1.4.11\logback-classic-1.4.11.jar;C:\Users\radha\.m2\repository\ch\qos\logback\logback-core\1.4.11\logback-core-1.4.11.jar;C:\Users\radha\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.21.1\log4j-to-slf4j-2.21.1.jar;C:\Users\radha\.m2\repository\org\apache\logging\log4j\log4j-api\2.21.1\log4j-api-2.21.1.jar;C:\Users\radha\.m2\repository\org\slf4j\jul-to-slf4j\2.0.9\jul-to-slf4j-2.0.9.jar;C:\Users\radha\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\radha\.m2\repository\org\yaml\snakeyaml\2.2\snakeyaml-2.2.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.2.0\spring-boot-starter-json-3.2.0.jar;C:\Users\radha\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.15.3\jackson-databind-2.15.3.jar;C:\Users\radha\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.15.3\jackson-annotations-2.15.3.jar;C:\Users\radha\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.15.3\jackson-core-2.15.3.jar;C:\Users\radha\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.15.3\jackson-datatype-jdk8-2.15.3.jar;C:\Users\radha\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.15.3\jackson-datatype-jsr310-2.15.3.jar;C:\Users\radha\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.15.3\jackson-module-parameter-names-2.15.3.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.2.0\spring-boot-starter-tomcat-3.2.0.jar;C:\Users\radha\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.16\tomcat-embed-core-10.1.16.jar;C:\Users\radha\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.16\tomcat-embed-websocket-10.1.16.jar;C:\Users\radha\.m2\repository\org\springframework\spring-web\6.1.1\spring-web-6.1.1.jar;C:\Users\radha\.m2\repository\org\springframework\spring-beans\6.1.1\spring-beans-6.1.1.jar;C:\Users\radha\.m2\repository\io\micrometer\micrometer-observation\1.12.0\micrometer-observation-1.12.0.jar;C:\Users\radha\.m2\repository\io\micrometer\micrometer-commons\1.12.0\micrometer-commons-1.12.0.jar;C:\Users\radha\.m2\repository\org\springframework\spring-webmvc\6.1.1\spring-webmvc-6.1.1.jar;C:\Users\radha\.m2\repository\org\springframework\spring-aop\6.1.1\spring-aop-6.1.1.jar;C:\Users\radha\.m2\repository\org\springframework\spring-context\6.1.1\spring-context-6.1.1.jar;C:\Users\radha\.m2\repository\org\springframework\spring-expression\6.1.1\spring-expression-6.1.1.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\3.2.0\spring-boot-starter-data-jpa-3.2.0.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-starter-aop\3.2.0\spring-boot-starter-aop-3.2.0.jar;C:\Users\radha\.m2\repository\org\aspectj\aspectjweaver\1.9.20.1\aspectjweaver-1.9.20.1.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\3.2.0\spring-boot-starter-jdbc-3.2.0.jar;C:\Users\radha\.m2\repository\com\zaxxer\HikariCP\5.0.1\HikariCP-5.0.1.jar;C:\Users\radha\.m2\repository\org\springframework\spring-jdbc\6.1.1\spring-jdbc-6.1.1.jar;C:\Users\radha\.m2\repository\org\hibernate\orm\hibernate-core\6.3.1.Final\hibernate-core-6.3.1.Final.jar;C:\Users\radha\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\radha\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\radha\.m2\repository\org\jboss\logging\jboss-logging\3.5.3.Final\jboss-logging-3.5.3.Final.jar;C:\Users\radha\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.6.Final\hibernate-commons-annotations-6.0.6.Final.jar;C:\Users\radha\.m2\repository\io\smallrye\jandex\3.1.2\jandex-3.1.2.jar;C:\Users\radha\.m2\repository\com\fasterxml\classmate\1.6.0\classmate-1.6.0.jar;C:\Users\radha\.m2\repository\net\bytebuddy\byte-buddy\1.14.10\byte-buddy-1.14.10.jar;C:\Users\radha\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.4\jaxb-runtime-4.0.4.jar;C:\Users\radha\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.4\jaxb-core-4.0.4.jar;C:\Users\radha\.m2\repository\org\eclipse\angus\angus-activation\2.0.1\angus-activation-2.0.1.jar;C:\Users\radha\.m2\repository\org\glassfish\jaxb\txw2\4.0.4\txw2-4.0.4.jar;C:\Users\radha\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\radha\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\radha\.m2\repository\org\antlr\antlr4-runtime\4.10.1\antlr4-runtime-4.10.1.jar;C:\Users\radha\.m2\repository\org\springframework\data\spring-data-jpa\3.2.0\spring-data-jpa-3.2.0.jar;C:\Users\radha\.m2\repository\org\springframework\data\spring-data-commons\3.2.0\spring-data-commons-3.2.0.jar;C:\Users\radha\.m2\repository\org\springframework\spring-orm\6.1.1\spring-orm-6.1.1.jar;C:\Users\radha\.m2\repository\org\springframework\spring-tx\6.1.1\spring-tx-6.1.1.jar;C:\Users\radha\.m2\repository\org\slf4j\slf4j-api\2.0.9\slf4j-api-2.0.9.jar;C:\Users\radha\.m2\repository\org\springframework\spring-aspects\6.1.1\spring-aspects-6.1.1.jar;C:\Users\radha\.m2\repository\com\mysql\mysql-connector-j\8.1.0\mysql-connector-j-8.1.0.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-starter-validation\3.2.0\spring-boot-starter-validation-3.2.0.jar;C:\Users\radha\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.16\tomcat-embed-el-10.1.16.jar;C:\Users\radha\.m2\repository\org\hibernate\validator\hibernate-validator\8.0.1.Final\hibernate-validator-8.0.1.Final.jar;C:\Users\radha\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\radha\.m2\repository\org\projectlombok\lombok\1.18.30\lombok-1.18.30.jar;C:\Users\radha\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-ui\2.2.0\springdoc-openapi-starter-webmvc-ui-2.2.0.jar;C:\Users\radha\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-api\2.2.0\springdoc-openapi-starter-webmvc-api-2.2.0.jar;C:\Users\radha\.m2\repository\org\springdoc\springdoc-openapi-starter-common\2.2.0\springdoc-openapi-starter-common-2.2.0.jar;C:\Users\radha\.m2\repository\io\swagger\core\v3\swagger-core-jakarta\2.2.15\swagger-core-jakarta-2.2.15.jar;C:\Users\radha\.m2\repository\org\apache\commons\commons-lang3\3.13.0\commons-lang3-3.13.0.jar;C:\Users\radha\.m2\repository\io\swagger\core\v3\swagger-annotations-jakarta\2.2.15\swagger-annotations-jakarta-2.2.15.jar;C:\Users\radha\.m2\repository\io\swagger\core\v3\swagger-models-jakarta\2.2.15\swagger-models-jakarta-2.2.15.jar;C:\Users\radha\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.15.3\jackson-dataformat-yaml-2.15.3.jar;C:\Users\radha\.m2\repository\org\webjars\swagger-ui\5.2.0\swagger-ui-5.2.0.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.2.0\spring-boot-starter-test-3.2.0.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-test\3.2.0\spring-boot-test-3.2.0.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.2.0\spring-boot-test-autoconfigure-3.2.0.jar;C:\Users\radha\.m2\repository\com\jayway\jsonpath\json-path\2.8.0\json-path-2.8.0.jar;C:\Users\radha\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.1\jakarta.xml.bind-api-4.0.1.jar;C:\Users\radha\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.2\jakarta.activation-api-2.1.2.jar;C:\Users\radha\.m2\repository\net\minidev\json-smart\2.5.0\json-smart-2.5.0.jar;C:\Users\radha\.m2\repository\net\minidev\accessors-smart\2.5.0\accessors-smart-2.5.0.jar;C:\Users\radha\.m2\repository\org\ow2\asm\asm\9.3\asm-9.3.jar;C:\Users\radha\.m2\repository\org\assertj\assertj-core\3.24.2\assertj-core-3.24.2.jar;C:\Users\radha\.m2\repository\org\awaitility\awaitility\4.2.0\awaitility-4.2.0.jar;C:\Users\radha\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\radha\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.1\junit-jupiter-5.10.1.jar;C:\Users\radha\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.1\junit-jupiter-api-5.10.1.jar;C:\Users\radha\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\radha\.m2\repository\org\junit\platform\junit-platform-commons\1.10.1\junit-platform-commons-1.10.1.jar;C:\Users\radha\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\radha\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.1\junit-jupiter-params-5.10.1.jar;C:\Users\radha\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.1\junit-jupiter-engine-5.10.1.jar;C:\Users\radha\.m2\repository\org\junit\platform\junit-platform-engine\1.10.1\junit-platform-engine-1.10.1.jar;C:\Users\radha\.m2\repository\org\mockito\mockito-core\5.7.0\mockito-core-5.7.0.jar;C:\Users\radha\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.10\byte-buddy-agent-1.14.10.jar;C:\Users\radha\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\radha\.m2\repository\org\mockito\mockito-junit-jupiter\5.7.0\mockito-junit-jupiter-5.7.0.jar;C:\Users\radha\.m2\repository\org\skyscreamer\jsonassert\1.5.1\jsonassert-1.5.1.jar;C:\Users\radha\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\radha\.m2\repository\org\springframework\spring-core\6.1.1\spring-core-6.1.1.jar;C:\Users\radha\.m2\repository\org\springframework\spring-jcl\6.1.1\spring-jcl-6.1.1.jar;C:\Users\radha\.m2\repository\org\springframework\spring-test\6.1.1\spring-test-6.1.1.jar;C:\Users\radha\.m2\repository\org\xmlunit\xmlunit-core\2.9.1\xmlunit-core-2.9.1.jar;C:\Users\radha\.m2\repository\com\h2database\h2\2.2.224\h2-2.2.224.jar;C:\Users\radha\.m2\repository\org\testcontainers\junit-jupiter\1.19.3\junit-jupiter-1.19.3.jar;C:\Users\radha\.m2\repository\org\testcontainers\testcontainers\1.19.3\testcontainers-1.19.3.jar;C:\Users\radha\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\radha\.m2\repository\org\hamcrest\hamcrest-core\2.2\hamcrest-core-2.2.jar;C:\Users\radha\.m2\repository\org\apache\commons\commons-compress\1.24.0\commons-compress-1.24.0.jar;C:\Users\radha\.m2\repository\org\rnorth\duct-tape\duct-tape\1.0.8\duct-tape-1.0.8.jar;C:\Users\radha\.m2\repository\org\jetbrains\annotations\17.0.0\annotations-17.0.0.jar;C:\Users\radha\.m2\repository\com\github\docker-java\docker-java-api\3.3.4\docker-java-api-3.3.4.jar;C:\Users\radha\.m2\repository\com\github\docker-java\docker-java-transport-zerodep\3.3.4\docker-java-transport-zerodep-3.3.4.jar;C:\Users\radha\.m2\repository\com\github\docker-java\docker-java-transport\3.3.4\docker-java-transport-3.3.4.jar;C:\Users\radha\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\radha\.m2\repository\org\testcontainers\mysql\1.19.3\mysql-1.19.3.jar;C:\Users\radha\.m2\repository\org\testcontainers\jdbc\1.19.3\jdbc-1.19.3.jar;C:\Users\radha\.m2\repository\org\testcontainers\database-commons\1.19.3\database-commons-1.19.3.jar;"/>
+    <property name="surefire.test.class.path" value="C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube\target\test-classes;C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube\target\classes;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.2.0\spring-boot-starter-web-3.2.0.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-starter\3.2.0\spring-boot-starter-3.2.0.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot\3.2.0\spring-boot-3.2.0.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.2.0\spring-boot-autoconfigure-3.2.0.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.2.0\spring-boot-starter-logging-3.2.0.jar;C:\Users\radha\.m2\repository\ch\qos\logback\logback-classic\1.4.11\logback-classic-1.4.11.jar;C:\Users\radha\.m2\repository\ch\qos\logback\logback-core\1.4.11\logback-core-1.4.11.jar;C:\Users\radha\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.21.1\log4j-to-slf4j-2.21.1.jar;C:\Users\radha\.m2\repository\org\apache\logging\log4j\log4j-api\2.21.1\log4j-api-2.21.1.jar;C:\Users\radha\.m2\repository\org\slf4j\jul-to-slf4j\2.0.9\jul-to-slf4j-2.0.9.jar;C:\Users\radha\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\radha\.m2\repository\org\yaml\snakeyaml\2.2\snakeyaml-2.2.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.2.0\spring-boot-starter-json-3.2.0.jar;C:\Users\radha\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.15.3\jackson-databind-2.15.3.jar;C:\Users\radha\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.15.3\jackson-annotations-2.15.3.jar;C:\Users\radha\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.15.3\jackson-core-2.15.3.jar;C:\Users\radha\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.15.3\jackson-datatype-jdk8-2.15.3.jar;C:\Users\radha\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.15.3\jackson-datatype-jsr310-2.15.3.jar;C:\Users\radha\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.15.3\jackson-module-parameter-names-2.15.3.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.2.0\spring-boot-starter-tomcat-3.2.0.jar;C:\Users\radha\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.16\tomcat-embed-core-10.1.16.jar;C:\Users\radha\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.16\tomcat-embed-websocket-10.1.16.jar;C:\Users\radha\.m2\repository\org\springframework\spring-web\6.1.1\spring-web-6.1.1.jar;C:\Users\radha\.m2\repository\org\springframework\spring-beans\6.1.1\spring-beans-6.1.1.jar;C:\Users\radha\.m2\repository\io\micrometer\micrometer-observation\1.12.0\micrometer-observation-1.12.0.jar;C:\Users\radha\.m2\repository\io\micrometer\micrometer-commons\1.12.0\micrometer-commons-1.12.0.jar;C:\Users\radha\.m2\repository\org\springframework\spring-webmvc\6.1.1\spring-webmvc-6.1.1.jar;C:\Users\radha\.m2\repository\org\springframework\spring-aop\6.1.1\spring-aop-6.1.1.jar;C:\Users\radha\.m2\repository\org\springframework\spring-context\6.1.1\spring-context-6.1.1.jar;C:\Users\radha\.m2\repository\org\springframework\spring-expression\6.1.1\spring-expression-6.1.1.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\3.2.0\spring-boot-starter-data-jpa-3.2.0.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-starter-aop\3.2.0\spring-boot-starter-aop-3.2.0.jar;C:\Users\radha\.m2\repository\org\aspectj\aspectjweaver\1.9.20.1\aspectjweaver-1.9.20.1.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\3.2.0\spring-boot-starter-jdbc-3.2.0.jar;C:\Users\radha\.m2\repository\com\zaxxer\HikariCP\5.0.1\HikariCP-5.0.1.jar;C:\Users\radha\.m2\repository\org\springframework\spring-jdbc\6.1.1\spring-jdbc-6.1.1.jar;C:\Users\radha\.m2\repository\org\hibernate\orm\hibernate-core\6.3.1.Final\hibernate-core-6.3.1.Final.jar;C:\Users\radha\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\radha\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\radha\.m2\repository\org\jboss\logging\jboss-logging\3.5.3.Final\jboss-logging-3.5.3.Final.jar;C:\Users\radha\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.6.Final\hibernate-commons-annotations-6.0.6.Final.jar;C:\Users\radha\.m2\repository\io\smallrye\jandex\3.1.2\jandex-3.1.2.jar;C:\Users\radha\.m2\repository\com\fasterxml\classmate\1.6.0\classmate-1.6.0.jar;C:\Users\radha\.m2\repository\net\bytebuddy\byte-buddy\1.14.10\byte-buddy-1.14.10.jar;C:\Users\radha\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.4\jaxb-runtime-4.0.4.jar;C:\Users\radha\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.4\jaxb-core-4.0.4.jar;C:\Users\radha\.m2\repository\org\eclipse\angus\angus-activation\2.0.1\angus-activation-2.0.1.jar;C:\Users\radha\.m2\repository\org\glassfish\jaxb\txw2\4.0.4\txw2-4.0.4.jar;C:\Users\radha\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\radha\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\radha\.m2\repository\org\antlr\antlr4-runtime\4.10.1\antlr4-runtime-4.10.1.jar;C:\Users\radha\.m2\repository\org\springframework\data\spring-data-jpa\3.2.0\spring-data-jpa-3.2.0.jar;C:\Users\radha\.m2\repository\org\springframework\data\spring-data-commons\3.2.0\spring-data-commons-3.2.0.jar;C:\Users\radha\.m2\repository\org\springframework\spring-orm\6.1.1\spring-orm-6.1.1.jar;C:\Users\radha\.m2\repository\org\springframework\spring-tx\6.1.1\spring-tx-6.1.1.jar;C:\Users\radha\.m2\repository\org\slf4j\slf4j-api\2.0.9\slf4j-api-2.0.9.jar;C:\Users\radha\.m2\repository\org\springframework\spring-aspects\6.1.1\spring-aspects-6.1.1.jar;C:\Users\radha\.m2\repository\com\mysql\mysql-connector-j\8.1.0\mysql-connector-j-8.1.0.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-starter-validation\3.2.0\spring-boot-starter-validation-3.2.0.jar;C:\Users\radha\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.16\tomcat-embed-el-10.1.16.jar;C:\Users\radha\.m2\repository\org\hibernate\validator\hibernate-validator\8.0.1.Final\hibernate-validator-8.0.1.Final.jar;C:\Users\radha\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\radha\.m2\repository\org\projectlombok\lombok\1.18.30\lombok-1.18.30.jar;C:\Users\radha\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-ui\2.2.0\springdoc-openapi-starter-webmvc-ui-2.2.0.jar;C:\Users\radha\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-api\2.2.0\springdoc-openapi-starter-webmvc-api-2.2.0.jar;C:\Users\radha\.m2\repository\org\springdoc\springdoc-openapi-starter-common\2.2.0\springdoc-openapi-starter-common-2.2.0.jar;C:\Users\radha\.m2\repository\io\swagger\core\v3\swagger-core-jakarta\2.2.15\swagger-core-jakarta-2.2.15.jar;C:\Users\radha\.m2\repository\org\apache\commons\commons-lang3\3.13.0\commons-lang3-3.13.0.jar;C:\Users\radha\.m2\repository\io\swagger\core\v3\swagger-annotations-jakarta\2.2.15\swagger-annotations-jakarta-2.2.15.jar;C:\Users\radha\.m2\repository\io\swagger\core\v3\swagger-models-jakarta\2.2.15\swagger-models-jakarta-2.2.15.jar;C:\Users\radha\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.15.3\jackson-dataformat-yaml-2.15.3.jar;C:\Users\radha\.m2\repository\org\webjars\swagger-ui\5.2.0\swagger-ui-5.2.0.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.2.0\spring-boot-starter-test-3.2.0.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-test\3.2.0\spring-boot-test-3.2.0.jar;C:\Users\radha\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.2.0\spring-boot-test-autoconfigure-3.2.0.jar;C:\Users\radha\.m2\repository\com\jayway\jsonpath\json-path\2.8.0\json-path-2.8.0.jar;C:\Users\radha\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.1\jakarta.xml.bind-api-4.0.1.jar;C:\Users\radha\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.2\jakarta.activation-api-2.1.2.jar;C:\Users\radha\.m2\repository\net\minidev\json-smart\2.5.0\json-smart-2.5.0.jar;C:\Users\radha\.m2\repository\net\minidev\accessors-smart\2.5.0\accessors-smart-2.5.0.jar;C:\Users\radha\.m2\repository\org\ow2\asm\asm\9.3\asm-9.3.jar;C:\Users\radha\.m2\repository\org\assertj\assertj-core\3.24.2\assertj-core-3.24.2.jar;C:\Users\radha\.m2\repository\org\awaitility\awaitility\4.2.0\awaitility-4.2.0.jar;C:\Users\radha\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\radha\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.1\junit-jupiter-5.10.1.jar;C:\Users\radha\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.1\junit-jupiter-api-5.10.1.jar;C:\Users\radha\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\radha\.m2\repository\org\junit\platform\junit-platform-commons\1.10.1\junit-platform-commons-1.10.1.jar;C:\Users\radha\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\radha\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.1\junit-jupiter-params-5.10.1.jar;C:\Users\radha\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.1\junit-jupiter-engine-5.10.1.jar;C:\Users\radha\.m2\repository\org\junit\platform\junit-platform-engine\1.10.1\junit-platform-engine-1.10.1.jar;C:\Users\radha\.m2\repository\org\mockito\mockito-core\5.7.0\mockito-core-5.7.0.jar;C:\Users\radha\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.10\byte-buddy-agent-1.14.10.jar;C:\Users\radha\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\radha\.m2\repository\org\mockito\mockito-junit-jupiter\5.7.0\mockito-junit-jupiter-5.7.0.jar;C:\Users\radha\.m2\repository\org\skyscreamer\jsonassert\1.5.1\jsonassert-1.5.1.jar;C:\Users\radha\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\radha\.m2\repository\org\springframework\spring-core\6.1.1\spring-core-6.1.1.jar;C:\Users\radha\.m2\repository\org\springframework\spring-jcl\6.1.1\spring-jcl-6.1.1.jar;C:\Users\radha\.m2\repository\org\springframework\spring-test\6.1.1\spring-test-6.1.1.jar;C:\Users\radha\.m2\repository\org\xmlunit\xmlunit-core\2.9.1\xmlunit-core-2.9.1.jar;C:\Users\radha\.m2\repository\com\h2database\h2\2.2.224\h2-2.2.224.jar;C:\Users\radha\.m2\repository\org\testcontainers\junit-jupiter\1.19.3\junit-jupiter-1.19.3.jar;C:\Users\radha\.m2\repository\org\testcontainers\testcontainers\1.19.3\testcontainers-1.19.3.jar;C:\Users\radha\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\radha\.m2\repository\org\hamcrest\hamcrest-core\2.2\hamcrest-core-2.2.jar;C:\Users\radha\.m2\repository\org\apache\commons\commons-compress\1.24.0\commons-compress-1.24.0.jar;C:\Users\radha\.m2\repository\org\rnorth\duct-tape\duct-tape\1.0.8\duct-tape-1.0.8.jar;C:\Users\radha\.m2\repository\org\jetbrains\annotations\17.0.0\annotations-17.0.0.jar;C:\Users\radha\.m2\repository\com\github\docker-java\docker-java-api\3.3.4\docker-java-api-3.3.4.jar;C:\Users\radha\.m2\repository\com\github\docker-java\docker-java-transport-zerodep\3.3.4\docker-java-transport-zerodep-3.3.4.jar;C:\Users\radha\.m2\repository\com\github\docker-java\docker-java-transport\3.3.4\docker-java-transport-3.3.4.jar;C:\Users\radha\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\radha\.m2\repository\org\testcontainers\mysql\1.19.3\mysql-1.19.3.jar;C:\Users\radha\.m2\repository\org\testcontainers\jdbc\1.19.3\jdbc-1.19.3.jar;C:\Users\radha\.m2\repository\org\testcontainers\database-commons\1.19.3\database-commons-1.19.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\radha"/>
     <property name="user.language" value="en"/>
@@ -26,7 +26,7 @@
     <property name="java.version.date" value="2025-04-15"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-21"/>
     <property name="file.separator" value="\"/>
-    <property name="basedir" value="C:\Users\radha\Downloads\NewProj\GitPull"/>
+    <property name="basedir" value="C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube"/>
     <property name="style.color" value="always"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
@@ -34,7 +34,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="FILE_LOG_CHARSET" value="UTF-8"/>
     <property name="java.awt.headless" value="true"/>
-    <property name="surefire.real.class.path" value="C:\Users\radha\AppData\Local\Temp\surefire126657324555322743\surefirebooter-20251119220345327_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\radha\AppData\Local\Temp\surefire17984889784266331072\surefirebooter-20251129101354588_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.7+8-LTS-245"/>
@@ -50,14 +50,14 @@
     <property name="localRepository" value="C:\Users\radha\.m2\repository"/>
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="C:\Users\radha\AppData\Local\Temp\"/>
-    <property name="idea.version" value="2025.2.4"/>
+    <property name="idea.version" value="2025.2.5"/>
     <property name="com.zaxxer.hikari.pool_number" value="1"/>
     <property name="java.version" value="21.0.7"/>
-    <property name="user.dir" value="C:\Users\radha\Downloads\NewProj\GitPull"/>
+    <property name="user.dir" value="C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube"/>
     <property name="os.arch" value="amd64"/>
     <property name="jansi.passthrough" value="true"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="PID" value="26196"/>
+    <property name="PID" value="1948"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
     <property name="native.encoding" value="Cp1252"/>
@@ -71,9 +71,9 @@
     <property name="java.class.version" value="65.0"/>
     <property name="LOGGED_APPLICATION_NAME" value="[cloud-vendor-api] "/>
   </properties>
-  <testcase name="shouldHandleEmptyVendorList" classname="com.example.cloudvendor.integration.CloudVendorIntegrationTest" time="0.24">
-    <system-out><![CDATA[2025-11-19 22:03:51.926 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.cloudvendor.integration.CloudVendorIntegrationTest]: CloudVendorIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-11-19 22:03:51.991 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.cloudvendor.CloudVendorApiApplication for test class com.example.cloudvendor.integration.CloudVendorIntegrationTest
+  <testcase name="shouldHandleEmptyVendorList" classname="com.example.cloudvendor.integration.CloudVendorIntegrationTest" time="0.273">
+    <system-out><![CDATA[2025-11-29 10:14:02.036 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.cloudvendor.integration.CloudVendorIntegrationTest]: CloudVendorIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-29 10:14:02.070 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.cloudvendor.CloudVendorApiApplication for test class com.example.cloudvendor.integration.CloudVendorIntegrationTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -83,23 +83,23 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.0)
 
-2025-11-19 22:03:52.125 [main] INFO  c.e.c.i.CloudVendorIntegrationTest - Starting CloudVendorIntegrationTest using Java 21.0.7 with PID 26196 (started by Krishna Reddy in C:\Users\radha\Downloads\NewProj\GitPull)
-2025-11-19 22:03:52.125 [main] DEBUG c.e.c.i.CloudVendorIntegrationTest - Running with Spring Boot v3.2.0, Spring v6.1.1
-2025-11-19 22:03:52.126 [main] INFO  c.e.c.i.CloudVendorIntegrationTest - The following 1 profile is active: "test"
-2025-11-19 22:03:52.696 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-11-19 22:03:52.763 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 56 ms. Found 1 JPA repository interface.
-2025-11-19 22:03:53.182 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-11-19 22:03:53.291 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
-2025-11-19 22:03:53.332 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-11-19 22:03:53.459 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-11-19 22:03:53.486 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-11-19 22:03:53.726 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2025-11-19 22:03:53.728 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-11-19 22:03:53.754 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-11-19 22:03:54.418 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-11-19 22:03:54.434 [main] DEBUG org.hibernate.SQL - 
+2025-11-29 10:14:02.170 [main] INFO  c.e.c.i.CloudVendorIntegrationTest - Starting CloudVendorIntegrationTest using Java 21.0.7 with PID 1948 (started by Krishna Reddy in C:\Users\radha\OneDrive\Documents\0SpringBoot\Cloud-Vendor-SpringBoot-MySQL-K8S-Minikube)
+2025-11-29 10:14:02.172 [main] DEBUG c.e.c.i.CloudVendorIntegrationTest - Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-11-29 10:14:02.172 [main] INFO  c.e.c.i.CloudVendorIntegrationTest - The following 1 profile is active: "test"
+2025-11-29 10:14:02.751 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-29 10:14:02.872 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 81 ms. Found 1 JPA repository interface.
+2025-11-29 10:14:03.358 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-29 10:14:03.488 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-11-29 10:14:03.550 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-29 10:14:03.673 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-29 10:14:03.698 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-29 10:14:03.942 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-11-29 10:14:03.956 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-29 10:14:03.986 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-29 10:14:04.728 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-29 10:14:04.748 [main] DEBUG org.hibernate.SQL - 
     drop table if exists cloud_vendor cascade 
-2025-11-19 22:03:54.442 [main] DEBUG org.hibernate.SQL - 
+2025-11-29 10:14:04.772 [main] DEBUG org.hibernate.SQL - 
     create table cloud_vendor (
         vendor_address varchar(255),
         vendor_id varchar(255) not null,
@@ -107,15 +107,15 @@
         vendor_phone_number varchar(255),
         primary key (vendor_id)
     )
-2025-11-19 22:03:54.452 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-11-19 22:03:54.775 [main] INFO  c.e.cloudvendor.config.OpenApiConfig - Initializing OpenAPI configuration
-2025-11-19 22:03:54.924 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-11-19 22:03:55.062 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2025-11-19 22:03:55.114 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
-2025-11-19 22:03:55.114 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
-2025-11-19 22:03:55.115 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
-2025-11-19 22:03:55.126 [main] INFO  c.e.c.i.CloudVendorIntegrationTest - Started CloudVendorIntegrationTest in 3.107 seconds (process running for 9.565)
-2025-11-19 22:03:55.322 [main] DEBUG org.hibernate.SQL - 
+2025-11-29 10:14:04.772 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-29 10:14:05.135 [main] INFO  c.e.cloudvendor.config.OpenApiConfig - Initializing OpenAPI configuration
+2025-11-29 10:14:05.312 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-29 10:14:05.538 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-11-29 10:14:05.621 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-11-29 10:14:05.621 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-11-29 10:14:05.621 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2025-11-29 10:14:05.635 [main] INFO  c.e.c.i.CloudVendorIntegrationTest - Started CloudVendorIntegrationTest in 3.549 seconds (process running for 10.736)
+2025-11-29 10:14:05.838 [main] DEBUG org.hibernate.SQL - 
     select
         cv1_0.vendor_id,
         cv1_0.vendor_address,
@@ -123,9 +123,9 @@
         cv1_0.vendor_phone_number 
     from
         cloud_vendor cv1_0
-2025-11-19 22:03:55.359 [main] INFO  c.e.c.c.CloudVendorController - GET /cloudvendor - Retrieving all cloud vendors
-2025-11-19 22:03:55.359 [main] DEBUG c.e.c.s.impl.CloudVendorServiceImpl - Retrieving all cloud vendors
-2025-11-19 22:03:55.361 [main] DEBUG org.hibernate.SQL - 
+2025-11-29 10:14:05.882 [main] INFO  c.e.c.c.CloudVendorController - GET /cloudvendor - Retrieving all cloud vendors
+2025-11-29 10:14:05.882 [main] DEBUG c.e.c.s.impl.CloudVendorServiceImpl - Retrieving all cloud vendors
+2025-11-29 10:14:05.894 [main] DEBUG org.hibernate.SQL - 
     select
         cv1_0.vendor_id,
         cv1_0.vendor_address,
@@ -133,8 +133,8 @@
         cv1_0.vendor_phone_number 
     from
         cloud_vendor cv1_0
-2025-11-19 22:03:55.363 [main] WARN  c.e.c.s.impl.CloudVendorServiceImpl - No cloud vendors found in the database
-2025-11-19 22:03:55.363 [main] ERROR c.e.c.c.CloudVendorController - Error retrieving all cloud vendors - No Cloud Vendors found
+2025-11-29 10:14:05.894 [main] WARN  c.e.c.s.impl.CloudVendorServiceImpl - No cloud vendors found in the database
+2025-11-29 10:14:05.894 [main] ERROR c.e.c.c.CloudVendorController - Error retrieving all cloud vendors - No Cloud Vendors found
 
 MockHttpServletRequest:
       HTTP Method = GET
@@ -174,8 +174,8 @@ MockHttpServletResponse:
           Cookies = []
 ]]></system-out>
   </testcase>
-  <testcase name="shouldTestHealthEndpoint" classname="com.example.cloudvendor.integration.CloudVendorIntegrationTest" time="0.008">
-    <system-out><![CDATA[2025-11-19 22:03:55.378 [main] DEBUG org.hibernate.SQL - 
+  <testcase name="shouldTestHealthEndpoint" classname="com.example.cloudvendor.integration.CloudVendorIntegrationTest" time="0.024">
+    <system-out><![CDATA[2025-11-29 10:14:05.918 [main] DEBUG org.hibernate.SQL - 
     select
         cv1_0.vendor_id,
         cv1_0.vendor_address,
@@ -183,7 +183,7 @@ MockHttpServletResponse:
         cv1_0.vendor_phone_number 
     from
         cloud_vendor cv1_0
-2025-11-19 22:03:55.380 [main] DEBUG c.e.c.c.CloudVendorController - GET /cloudvendor/health - Health check endpoint called
+2025-11-29 10:14:05.922 [main] DEBUG c.e.c.c.CloudVendorController - GET /cloudvendor/health - Health check endpoint called
 
 MockHttpServletRequest:
       HTTP Method = GET
@@ -223,8 +223,8 @@ MockHttpServletResponse:
           Cookies = []
 ]]></system-out>
   </testcase>
-  <testcase name="shouldHandleUnsupportedHttpMethods" classname="com.example.cloudvendor.integration.CloudVendorIntegrationTest" time="0.014">
-    <system-out><![CDATA[2025-11-19 22:03:55.387 [main] DEBUG org.hibernate.SQL - 
+  <testcase name="shouldHandleUnsupportedHttpMethods" classname="com.example.cloudvendor.integration.CloudVendorIntegrationTest" time="0.019">
+    <system-out><![CDATA[2025-11-29 10:14:05.948 [main] DEBUG org.hibernate.SQL - 
     select
         cv1_0.vendor_id,
         cv1_0.vendor_address,
@@ -232,7 +232,7 @@ MockHttpServletResponse:
         cv1_0.vendor_phone_number 
     from
         cloud_vendor cv1_0
-2025-11-19 22:03:55.395 [main] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PATCH' is not supported]
+2025-11-29 10:14:05.951 [main] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PATCH' is not supported]
 
 MockHttpServletRequest:
       HTTP Method = PATCH
@@ -271,8 +271,8 @@ MockHttpServletResponse:
           Cookies = []
 ]]></system-out>
   </testcase>
-  <testcase name="shouldPerformCompleteCrudOperationsSuccessfully" classname="com.example.cloudvendor.integration.CloudVendorIntegrationTest" time="0.485">
-    <system-out><![CDATA[2025-11-19 22:03:55.403 [main] DEBUG org.hibernate.SQL - 
+  <testcase name="shouldPerformCompleteCrudOperationsSuccessfully" classname="com.example.cloudvendor.integration.CloudVendorIntegrationTest" time="0.615">
+    <system-out><![CDATA[2025-11-29 10:14:05.978 [main] DEBUG org.hibernate.SQL - 
     select
         cv1_0.vendor_id,
         cv1_0.vendor_address,
@@ -280,16 +280,16 @@ MockHttpServletResponse:
         cv1_0.vendor_phone_number 
     from
         cloud_vendor cv1_0
-2025-11-19 22:03:55.411 [main] INFO  c.e.c.c.CloudVendorController - POST /cloudvendor - Creating new cloud vendor with ID: V001
-2025-11-19 22:03:55.411 [main] DEBUG c.e.c.s.impl.CloudVendorServiceImpl - Creating cloud vendor with ID: V001
-2025-11-19 22:03:55.748 [main] DEBUG org.hibernate.SQL - 
+2025-11-29 10:14:06.000 [main] INFO  c.e.c.c.CloudVendorController - POST /cloudvendor - Creating new cloud vendor with ID: V001
+2025-11-29 10:14:06.000 [main] DEBUG c.e.c.s.impl.CloudVendorServiceImpl - Creating cloud vendor with ID: V001
+2025-11-29 10:14:06.407 [main] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         cloud_vendor cv1_0 
     where
         cv1_0.vendor_id=?
-2025-11-19 22:03:55.775 [main] DEBUG org.hibernate.SQL - 
+2025-11-29 10:14:06.446 [main] DEBUG org.hibernate.SQL - 
     select
         cv1_0.vendor_id,
         cv1_0.vendor_address,
@@ -299,8 +299,8 @@ MockHttpServletResponse:
         cloud_vendor cv1_0 
     where
         cv1_0.vendor_id=?
-2025-11-19 22:03:55.792 [main] INFO  c.e.c.s.impl.CloudVendorServiceImpl - Cloud vendor created successfully with ID: V001
-2025-11-19 22:03:55.793 [main] INFO  c.e.c.c.CloudVendorController - Successfully created cloud vendor with ID: V001
+2025-11-29 10:14:06.468 [main] INFO  c.e.c.s.impl.CloudVendorServiceImpl - Cloud vendor created successfully with ID: V001
+2025-11-29 10:14:06.468 [main] INFO  c.e.c.c.CloudVendorController - Successfully created cloud vendor with ID: V001
 
 MockHttpServletRequest:
       HTTP Method = POST
@@ -338,10 +338,10 @@ MockHttpServletResponse:
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
-2025-11-19 22:03:55.798 [main] INFO  c.e.c.c.CloudVendorController - GET /cloudvendor/V001 - Retrieving cloud vendor by ID
-2025-11-19 22:03:55.798 [main] DEBUG c.e.c.s.impl.CloudVendorServiceImpl - Retrieving cloud vendor with ID: V001
-2025-11-19 22:03:55.802 [main] INFO  c.e.c.s.impl.CloudVendorServiceImpl - Cloud vendor retrieved successfully with ID: V001
-2025-11-19 22:03:55.803 [main] INFO  c.e.c.c.CloudVendorController - Successfully retrieved cloud vendor with ID: V001
+2025-11-29 10:14:06.468 [main] INFO  c.e.c.c.CloudVendorController - GET /cloudvendor/V001 - Retrieving cloud vendor by ID
+2025-11-29 10:14:06.468 [main] DEBUG c.e.c.s.impl.CloudVendorServiceImpl - Retrieving cloud vendor with ID: V001
+2025-11-29 10:14:06.481 [main] INFO  c.e.c.s.impl.CloudVendorServiceImpl - Cloud vendor retrieved successfully with ID: V001
+2025-11-29 10:14:06.481 [main] INFO  c.e.c.c.CloudVendorController - Successfully retrieved cloud vendor with ID: V001
 
 MockHttpServletRequest:
       HTTP Method = GET
@@ -379,24 +379,24 @@ MockHttpServletResponse:
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
-2025-11-19 22:03:55.807 [main] INFO  c.e.c.c.CloudVendorController - PUT /cloudvendor - Updating cloud vendor with ID: V001
-2025-11-19 22:03:55.807 [main] DEBUG c.e.c.s.impl.CloudVendorServiceImpl - Updating cloud vendor with ID: V001
-2025-11-19 22:03:55.831 [main] DEBUG org.hibernate.SQL - 
+2025-11-29 10:14:06.497 [main] INFO  c.e.c.c.CloudVendorController - PUT /cloudvendor - Updating cloud vendor with ID: V001
+2025-11-29 10:14:06.497 [main] DEBUG c.e.c.s.impl.CloudVendorServiceImpl - Updating cloud vendor with ID: V001
+2025-11-29 10:14:06.532 [main] DEBUG org.hibernate.SQL - 
     insert 
     into
         cloud_vendor
         (vendor_address, vendor_name, vendor_phone_number, vendor_id) 
     values
         (?, ?, ?, ?)
-2025-11-19 22:03:55.841 [main] DEBUG org.hibernate.SQL - 
+2025-11-29 10:14:06.532 [main] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         cloud_vendor cv1_0 
     where
         cv1_0.vendor_id=?
-2025-11-19 22:03:55.843 [main] INFO  c.e.c.s.impl.CloudVendorServiceImpl - Cloud vendor updated successfully with ID: V001
-2025-11-19 22:03:55.843 [main] INFO  c.e.c.c.CloudVendorController - Successfully updated cloud vendor with ID: V001
+2025-11-29 10:14:06.547 [main] INFO  c.e.c.s.impl.CloudVendorServiceImpl - Cloud vendor updated successfully with ID: V001
+2025-11-29 10:14:06.547 [main] INFO  c.e.c.c.CloudVendorController - Successfully updated cloud vendor with ID: V001
 
 MockHttpServletRequest:
       HTTP Method = PUT
@@ -434,10 +434,10 @@ MockHttpServletResponse:
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
-2025-11-19 22:03:55.846 [main] INFO  c.e.c.c.CloudVendorController - GET /cloudvendor/V001 - Retrieving cloud vendor by ID
-2025-11-19 22:03:55.847 [main] DEBUG c.e.c.s.impl.CloudVendorServiceImpl - Retrieving cloud vendor with ID: V001
-2025-11-19 22:03:55.847 [main] INFO  c.e.c.s.impl.CloudVendorServiceImpl - Cloud vendor retrieved successfully with ID: V001
-2025-11-19 22:03:55.847 [main] INFO  c.e.c.c.CloudVendorController - Successfully retrieved cloud vendor with ID: V001
+2025-11-29 10:14:06.547 [main] INFO  c.e.c.c.CloudVendorController - GET /cloudvendor/V001 - Retrieving cloud vendor by ID
+2025-11-29 10:14:06.547 [main] DEBUG c.e.c.s.impl.CloudVendorServiceImpl - Retrieving cloud vendor with ID: V001
+2025-11-29 10:14:06.547 [main] INFO  c.e.c.s.impl.CloudVendorServiceImpl - Cloud vendor retrieved successfully with ID: V001
+2025-11-29 10:14:06.547 [main] INFO  c.e.c.c.CloudVendorController - Successfully retrieved cloud vendor with ID: V001
 
 MockHttpServletRequest:
       HTTP Method = GET
@@ -475,9 +475,9 @@ MockHttpServletResponse:
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
-2025-11-19 22:03:55.850 [main] INFO  c.e.c.c.CloudVendorController - DELETE /cloudvendor/V001 - Deleting cloud vendor by ID
-2025-11-19 22:03:55.851 [main] DEBUG c.e.c.s.impl.CloudVendorServiceImpl - Deleting cloud vendor with ID: V001
-2025-11-19 22:03:55.860 [main] DEBUG org.hibernate.SQL - 
+2025-11-29 10:14:06.552 [main] INFO  c.e.c.c.CloudVendorController - DELETE /cloudvendor/V001 - Deleting cloud vendor by ID
+2025-11-29 10:14:06.552 [main] DEBUG c.e.c.s.impl.CloudVendorServiceImpl - Deleting cloud vendor with ID: V001
+2025-11-29 10:14:06.563 [main] DEBUG org.hibernate.SQL - 
     update
         cloud_vendor 
     set
@@ -486,15 +486,15 @@ MockHttpServletResponse:
         vendor_phone_number=? 
     where
         vendor_id=?
-2025-11-19 22:03:55.867 [main] DEBUG org.hibernate.SQL - 
+2025-11-29 10:14:06.569 [main] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         cloud_vendor cv1_0 
     where
         cv1_0.vendor_id=?
-2025-11-19 22:03:55.874 [main] INFO  c.e.c.s.impl.CloudVendorServiceImpl - Cloud vendor deleted successfully with ID: V001
-2025-11-19 22:03:55.874 [main] INFO  c.e.c.c.CloudVendorController - Successfully deleted cloud vendor with ID: V001
+2025-11-29 10:14:06.580 [main] INFO  c.e.c.s.impl.CloudVendorServiceImpl - Cloud vendor deleted successfully with ID: V001
+2025-11-29 10:14:06.580 [main] INFO  c.e.c.c.CloudVendorController - Successfully deleted cloud vendor with ID: V001
 
 MockHttpServletRequest:
       HTTP Method = DELETE
@@ -532,10 +532,10 @@ MockHttpServletResponse:
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
-2025-11-19 22:03:55.877 [main] INFO  c.e.c.c.CloudVendorController - GET /cloudvendor/V001 - Retrieving cloud vendor by ID
-2025-11-19 22:03:55.878 [main] DEBUG c.e.c.s.impl.CloudVendorServiceImpl - Retrieving cloud vendor with ID: V001
-2025-11-19 22:03:55.878 [main] WARN  c.e.c.s.impl.CloudVendorServiceImpl - Cloud Vendor with ID V001 not found
-2025-11-19 22:03:55.878 [main] ERROR c.e.c.c.CloudVendorController - Error retrieving cloud vendor with ID: V001 - Cloud Vendor with ID V001 not found
+2025-11-29 10:14:06.580 [main] INFO  c.e.c.c.CloudVendorController - GET /cloudvendor/V001 - Retrieving cloud vendor by ID
+2025-11-29 10:14:06.580 [main] DEBUG c.e.c.s.impl.CloudVendorServiceImpl - Retrieving cloud vendor with ID: V001
+2025-11-29 10:14:06.580 [main] WARN  c.e.c.s.impl.CloudVendorServiceImpl - Cloud Vendor with ID V001 not found
+2025-11-29 10:14:06.580 [main] ERROR c.e.c.c.CloudVendorController - Error retrieving cloud vendor with ID: V001 - Cloud Vendor with ID V001 not found
 
 MockHttpServletRequest:
       HTTP Method = GET
@@ -575,8 +575,8 @@ MockHttpServletResponse:
           Cookies = []
 ]]></system-out>
   </testcase>
-  <testcase name="shouldHandleNonExistentVendorOperations" classname="com.example.cloudvendor.integration.CloudVendorIntegrationTest" time="0.022">
-    <system-out><![CDATA[2025-11-19 22:03:55.891 [main] DEBUG org.hibernate.SQL - 
+  <testcase name="shouldHandleNonExistentVendorOperations" classname="com.example.cloudvendor.integration.CloudVendorIntegrationTest" time="0.048">
+    <system-out><![CDATA[2025-11-29 10:14:06.607 [main] DEBUG org.hibernate.SQL - 
     select
         cv1_0.vendor_id,
         cv1_0.vendor_address,
@@ -584,9 +584,9 @@ MockHttpServletResponse:
         cv1_0.vendor_phone_number 
     from
         cloud_vendor cv1_0
-2025-11-19 22:03:55.893 [main] INFO  c.e.c.c.CloudVendorController - GET /cloudvendor/V999 - Retrieving cloud vendor by ID
-2025-11-19 22:03:55.893 [main] DEBUG c.e.c.s.impl.CloudVendorServiceImpl - Retrieving cloud vendor with ID: V999
-2025-11-19 22:03:55.893 [main] DEBUG org.hibernate.SQL - 
+2025-11-29 10:14:06.610 [main] INFO  c.e.c.c.CloudVendorController - GET /cloudvendor/V999 - Retrieving cloud vendor by ID
+2025-11-29 10:14:06.610 [main] DEBUG c.e.c.s.impl.CloudVendorServiceImpl - Retrieving cloud vendor with ID: V999
+2025-11-29 10:14:06.610 [main] DEBUG org.hibernate.SQL - 
     select
         cv1_0.vendor_id,
         cv1_0.vendor_address,
@@ -596,8 +596,8 @@ MockHttpServletResponse:
         cloud_vendor cv1_0 
     where
         cv1_0.vendor_id=?
-2025-11-19 22:03:55.894 [main] WARN  c.e.c.s.impl.CloudVendorServiceImpl - Cloud Vendor with ID V999 not found
-2025-11-19 22:03:55.894 [main] ERROR c.e.c.c.CloudVendorController - Error retrieving cloud vendor with ID: V999 - Cloud Vendor with ID V999 not found
+2025-11-29 10:14:06.613 [main] WARN  c.e.c.s.impl.CloudVendorServiceImpl - Cloud Vendor with ID V999 not found
+2025-11-29 10:14:06.613 [main] ERROR c.e.c.c.CloudVendorController - Error retrieving cloud vendor with ID: V999 - Cloud Vendor with ID V999 not found
 
 MockHttpServletRequest:
       HTTP Method = GET
@@ -635,17 +635,17 @@ MockHttpServletResponse:
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
-2025-11-19 22:03:55.897 [main] INFO  c.e.c.c.CloudVendorController - PUT /cloudvendor - Updating cloud vendor with ID: V999
-2025-11-19 22:03:55.898 [main] DEBUG c.e.c.s.impl.CloudVendorServiceImpl - Updating cloud vendor with ID: V999
-2025-11-19 22:03:55.899 [main] DEBUG org.hibernate.SQL - 
+2025-11-29 10:14:06.615 [main] INFO  c.e.c.c.CloudVendorController - PUT /cloudvendor - Updating cloud vendor with ID: V999
+2025-11-29 10:14:06.618 [main] DEBUG c.e.c.s.impl.CloudVendorServiceImpl - Updating cloud vendor with ID: V999
+2025-11-29 10:14:06.618 [main] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         cloud_vendor cv1_0 
     where
         cv1_0.vendor_id=?
-2025-11-19 22:03:55.900 [main] WARN  c.e.c.s.impl.CloudVendorServiceImpl - Cloud Vendor with ID V999 not found for update
-2025-11-19 22:03:55.900 [main] ERROR c.e.c.c.CloudVendorController - Error updating cloud vendor with ID: V999 - Cloud Vendor with ID V999 not found
+2025-11-29 10:14:06.618 [main] WARN  c.e.c.s.impl.CloudVendorServiceImpl - Cloud Vendor with ID V999 not found for update
+2025-11-29 10:14:06.620 [main] ERROR c.e.c.c.CloudVendorController - Error updating cloud vendor with ID: V999 - Cloud Vendor with ID V999 not found
 
 MockHttpServletRequest:
       HTTP Method = PUT
@@ -683,17 +683,17 @@ MockHttpServletResponse:
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
-2025-11-19 22:03:55.903 [main] INFO  c.e.c.c.CloudVendorController - DELETE /cloudvendor/V999 - Deleting cloud vendor by ID
-2025-11-19 22:03:55.903 [main] DEBUG c.e.c.s.impl.CloudVendorServiceImpl - Deleting cloud vendor with ID: V999
-2025-11-19 22:03:55.904 [main] DEBUG org.hibernate.SQL - 
+2025-11-29 10:14:06.622 [main] INFO  c.e.c.c.CloudVendorController - DELETE /cloudvendor/V999 - Deleting cloud vendor by ID
+2025-11-29 10:14:06.622 [main] DEBUG c.e.c.s.impl.CloudVendorServiceImpl - Deleting cloud vendor with ID: V999
+2025-11-29 10:14:06.622 [main] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         cloud_vendor cv1_0 
     where
         cv1_0.vendor_id=?
-2025-11-19 22:03:55.904 [main] WARN  c.e.c.s.impl.CloudVendorServiceImpl - Cloud Vendor with ID V999 not found for deletion
-2025-11-19 22:03:55.904 [main] ERROR c.e.c.c.CloudVendorController - Error deleting cloud vendor with ID: V999 - Cloud Vendor with ID V999 not found
+2025-11-29 10:14:06.622 [main] WARN  c.e.c.s.impl.CloudVendorServiceImpl - Cloud Vendor with ID V999 not found for deletion
+2025-11-29 10:14:06.624 [main] ERROR c.e.c.c.CloudVendorController - Error deleting cloud vendor with ID: V999 - Cloud Vendor with ID V999 not found
 
 MockHttpServletRequest:
       HTTP Method = DELETE
@@ -733,8 +733,8 @@ MockHttpServletResponse:
           Cookies = []
 ]]></system-out>
   </testcase>
-  <testcase name="shouldMaintainDataConsistencyAcrossOperations" classname="com.example.cloudvendor.integration.CloudVendorIntegrationTest" time="0.04">
-    <system-out><![CDATA[2025-11-19 22:03:55.914 [main] DEBUG org.hibernate.SQL - 
+  <testcase name="shouldMaintainDataConsistencyAcrossOperations" classname="com.example.cloudvendor.integration.CloudVendorIntegrationTest" time="0.06">
+    <system-out><![CDATA[2025-11-29 10:14:06.635 [main] DEBUG org.hibernate.SQL - 
     select
         cv1_0.vendor_id,
         cv1_0.vendor_address,
@@ -742,16 +742,16 @@ MockHttpServletResponse:
         cv1_0.vendor_phone_number 
     from
         cloud_vendor cv1_0
-2025-11-19 22:03:55.918 [main] INFO  c.e.c.c.CloudVendorController - POST /cloudvendor - Creating new cloud vendor with ID: V001
-2025-11-19 22:03:55.918 [main] DEBUG c.e.c.s.impl.CloudVendorServiceImpl - Creating cloud vendor with ID: V001
-2025-11-19 22:03:55.918 [main] DEBUG org.hibernate.SQL - 
+2025-11-29 10:14:06.642 [main] INFO  c.e.c.c.CloudVendorController - POST /cloudvendor - Creating new cloud vendor with ID: V001
+2025-11-29 10:14:06.642 [main] DEBUG c.e.c.s.impl.CloudVendorServiceImpl - Creating cloud vendor with ID: V001
+2025-11-29 10:14:06.644 [main] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         cloud_vendor cv1_0 
     where
         cv1_0.vendor_id=?
-2025-11-19 22:03:55.919 [main] DEBUG org.hibernate.SQL - 
+2025-11-29 10:14:06.644 [main] DEBUG org.hibernate.SQL - 
     select
         cv1_0.vendor_id,
         cv1_0.vendor_address,
@@ -761,39 +761,39 @@ MockHttpServletResponse:
         cloud_vendor cv1_0 
     where
         cv1_0.vendor_id=?
-2025-11-19 22:03:55.920 [main] INFO  c.e.c.s.impl.CloudVendorServiceImpl - Cloud vendor created successfully with ID: V001
-2025-11-19 22:03:55.921 [main] INFO  c.e.c.c.CloudVendorController - Successfully created cloud vendor with ID: V001
-2025-11-19 22:03:55.923 [main] DEBUG org.hibernate.SQL - 
+2025-11-29 10:14:06.648 [main] INFO  c.e.c.s.impl.CloudVendorServiceImpl - Cloud vendor created successfully with ID: V001
+2025-11-29 10:14:06.648 [main] INFO  c.e.c.c.CloudVendorController - Successfully created cloud vendor with ID: V001
+2025-11-29 10:14:06.648 [main] DEBUG org.hibernate.SQL - 
     insert 
     into
         cloud_vendor
         (vendor_address, vendor_name, vendor_phone_number, vendor_id) 
     values
         (?, ?, ?, ?)
-2025-11-19 22:03:55.924 [main] DEBUG org.hibernate.SQL - 
+2025-11-29 10:14:06.648 [main] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         cloud_vendor cv1_0 
     where
         cv1_0.vendor_id=?
-2025-11-19 22:03:55.928 [main] DEBUG org.hibernate.SQL - 
+2025-11-29 10:14:06.656 [main] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         cloud_vendor cv1_0
-2025-11-19 22:03:55.930 [main] INFO  c.e.c.c.CloudVendorController - PUT /cloudvendor - Updating cloud vendor with ID: V001
-2025-11-19 22:03:55.930 [main] DEBUG c.e.c.s.impl.CloudVendorServiceImpl - Updating cloud vendor with ID: V001
-2025-11-19 22:03:55.931 [main] DEBUG org.hibernate.SQL - 
+2025-11-29 10:14:06.656 [main] INFO  c.e.c.c.CloudVendorController - PUT /cloudvendor - Updating cloud vendor with ID: V001
+2025-11-29 10:14:06.656 [main] DEBUG c.e.c.s.impl.CloudVendorServiceImpl - Updating cloud vendor with ID: V001
+2025-11-29 10:14:06.656 [main] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         cloud_vendor cv1_0 
     where
         cv1_0.vendor_id=?
-2025-11-19 22:03:55.932 [main] INFO  c.e.c.s.impl.CloudVendorServiceImpl - Cloud vendor updated successfully with ID: V001
-2025-11-19 22:03:55.932 [main] INFO  c.e.c.c.CloudVendorController - Successfully updated cloud vendor with ID: V001
-2025-11-19 22:03:55.934 [main] DEBUG org.hibernate.SQL - 
+2025-11-29 10:14:06.656 [main] INFO  c.e.c.s.impl.CloudVendorServiceImpl - Cloud vendor updated successfully with ID: V001
+2025-11-29 10:14:06.656 [main] INFO  c.e.c.c.CloudVendorController - Successfully updated cloud vendor with ID: V001
+2025-11-29 10:14:06.656 [main] DEBUG org.hibernate.SQL - 
     update
         cloud_vendor 
     set
@@ -802,44 +802,44 @@ MockHttpServletResponse:
         vendor_phone_number=? 
     where
         vendor_id=?
-2025-11-19 22:03:55.935 [main] DEBUG org.hibernate.SQL - 
+2025-11-29 10:14:06.656 [main] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         cloud_vendor cv1_0
-2025-11-19 22:03:55.937 [main] INFO  c.e.c.c.CloudVendorController - DELETE /cloudvendor/V001 - Deleting cloud vendor by ID
-2025-11-19 22:03:55.937 [main] DEBUG c.e.c.s.impl.CloudVendorServiceImpl - Deleting cloud vendor with ID: V001
-2025-11-19 22:03:55.938 [main] DEBUG org.hibernate.SQL - 
+2025-11-29 10:14:06.656 [main] INFO  c.e.c.c.CloudVendorController - DELETE /cloudvendor/V001 - Deleting cloud vendor by ID
+2025-11-29 10:14:06.656 [main] DEBUG c.e.c.s.impl.CloudVendorServiceImpl - Deleting cloud vendor with ID: V001
+2025-11-29 10:14:06.670 [main] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         cloud_vendor cv1_0 
     where
         cv1_0.vendor_id=?
-2025-11-19 22:03:55.939 [main] INFO  c.e.c.s.impl.CloudVendorServiceImpl - Cloud vendor deleted successfully with ID: V001
-2025-11-19 22:03:55.939 [main] INFO  c.e.c.c.CloudVendorController - Successfully deleted cloud vendor with ID: V001
-2025-11-19 22:03:55.942 [main] DEBUG org.hibernate.SQL - 
+2025-11-29 10:14:06.672 [main] INFO  c.e.c.s.impl.CloudVendorServiceImpl - Cloud vendor deleted successfully with ID: V001
+2025-11-29 10:14:06.672 [main] INFO  c.e.c.c.CloudVendorController - Successfully deleted cloud vendor with ID: V001
+2025-11-29 10:14:06.677 [main] DEBUG org.hibernate.SQL - 
     delete 
     from
         cloud_vendor 
     where
         vendor_id=?
-2025-11-19 22:03:55.945 [main] DEBUG org.hibernate.SQL - 
+2025-11-29 10:14:06.680 [main] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         cloud_vendor cv1_0 
     where
         cv1_0.vendor_id=?
-2025-11-19 22:03:55.947 [main] DEBUG org.hibernate.SQL - 
+2025-11-29 10:14:06.680 [main] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         cloud_vendor cv1_0
 ]]></system-out>
   </testcase>
-  <testcase name="shouldValidateInputDataCorrectly" classname="com.example.cloudvendor.integration.CloudVendorIntegrationTest" time="0.015">
-    <system-out><![CDATA[2025-11-19 22:03:55.954 [main] DEBUG org.hibernate.SQL - 
+  <testcase name="shouldValidateInputDataCorrectly" classname="com.example.cloudvendor.integration.CloudVendorIntegrationTest" time="0.038">
+    <system-out><![CDATA[2025-11-29 10:14:06.694 [main] DEBUG org.hibernate.SQL - 
     select
         cv1_0.vendor_id,
         cv1_0.vendor_address,
@@ -847,7 +847,7 @@ MockHttpServletResponse:
         cv1_0.vendor_phone_number 
     from
         cloud_vendor cv1_0
-2025-11-19 22:03:55.957 [main] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<?> com.example.cloudvendor.controller.CloudVendorController.createVendor(com.example.cloudvendor.entity.CloudVendor): [Field error in object 'cloudVendor' on field 'vendorId': rejected value []; codes [NotBlank.cloudVendor.vendorId,NotBlank.vendorId,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [cloudVendor.vendorId,vendorId]; arguments []; default message [vendorId]]; default message [Vendor ID cannot be blank]] ]
+2025-11-29 10:14:06.700 [main] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<?> com.example.cloudvendor.controller.CloudVendorController.createVendor(com.example.cloudvendor.entity.CloudVendor): [Field error in object 'cloudVendor' on field 'vendorId': rejected value []; codes [NotBlank.cloudVendor.vendorId,NotBlank.vendorId,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [cloudVendor.vendorId,vendorId]; arguments []; default message [vendorId]]; default message [Vendor ID cannot be blank]] ]
 
 MockHttpServletRequest:
       HTTP Method = POST
@@ -885,7 +885,7 @@ MockHttpServletResponse:
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
-2025-11-19 22:03:55.960 [main] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<?> com.example.cloudvendor.controller.CloudVendorController.createVendor(com.example.cloudvendor.entity.CloudVendor): [Field error in object 'cloudVendor' on field 'vendorName': rejected value []; codes [NotBlank.cloudVendor.vendorName,NotBlank.vendorName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [cloudVendor.vendorName,vendorName]; arguments []; default message [vendorName]]; default message [Vendor name cannot be blank]] ]
+2025-11-29 10:14:06.706 [main] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<?> com.example.cloudvendor.controller.CloudVendorController.createVendor(com.example.cloudvendor.entity.CloudVendor): [Field error in object 'cloudVendor' on field 'vendorName': rejected value []; codes [NotBlank.cloudVendor.vendorName,NotBlank.vendorName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [cloudVendor.vendorName,vendorName]; arguments []; default message [vendorName]]; default message [Vendor name cannot be blank]] ]
 
 MockHttpServletRequest:
       HTTP Method = POST
@@ -923,7 +923,7 @@ MockHttpServletResponse:
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
-2025-11-19 22:03:55.962 [main] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<?> com.example.cloudvendor.controller.CloudVendorController.createVendor(com.example.cloudvendor.entity.CloudVendor): [Field error in object 'cloudVendor' on field 'vendorAddress': rejected value []; codes [NotBlank.cloudVendor.vendorAddress,NotBlank.vendorAddress,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [cloudVendor.vendorAddress,vendorAddress]; arguments []; default message [vendorAddress]]; default message [Vendor address cannot be blank]] ]
+2025-11-29 10:14:06.714 [main] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<?> com.example.cloudvendor.controller.CloudVendorController.createVendor(com.example.cloudvendor.entity.CloudVendor): [Field error in object 'cloudVendor' on field 'vendorAddress': rejected value []; codes [NotBlank.cloudVendor.vendorAddress,NotBlank.vendorAddress,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [cloudVendor.vendorAddress,vendorAddress]; arguments []; default message [vendorAddress]]; default message [Vendor address cannot be blank]] ]
 
 MockHttpServletRequest:
       HTTP Method = POST
@@ -961,7 +961,7 @@ MockHttpServletResponse:
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
-2025-11-19 22:03:55.964 [main] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<?> com.example.cloudvendor.controller.CloudVendorController.createVendor(com.example.cloudvendor.entity.CloudVendor): [Field error in object 'cloudVendor' on field 'vendorPhoneNumber': rejected value []; codes [NotBlank.cloudVendor.vendorPhoneNumber,NotBlank.vendorPhoneNumber,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [cloudVendor.vendorPhoneNumber,vendorPhoneNumber]; arguments []; default message [vendorPhoneNumber]]; default message [Vendor phone number cannot be blank]] ]
+2025-11-29 10:14:06.723 [main] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<?> com.example.cloudvendor.controller.CloudVendorController.createVendor(com.example.cloudvendor.entity.CloudVendor): [Field error in object 'cloudVendor' on field 'vendorPhoneNumber': rejected value []; codes [NotBlank.cloudVendor.vendorPhoneNumber,NotBlank.vendorPhoneNumber,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [cloudVendor.vendorPhoneNumber,vendorPhoneNumber]; arguments []; default message [vendorPhoneNumber]]; default message [Vendor phone number cannot be blank]] ]
 
 MockHttpServletRequest:
       HTTP Method = POST
@@ -1001,8 +1001,8 @@ MockHttpServletResponse:
           Cookies = []
 ]]></system-out>
   </testcase>
-  <testcase name="shouldHandleMissingContentType" classname="com.example.cloudvendor.integration.CloudVendorIntegrationTest" time="0.014">
-    <system-out><![CDATA[2025-11-19 22:03:55.973 [main] DEBUG org.hibernate.SQL - 
+  <testcase name="shouldHandleMissingContentType" classname="com.example.cloudvendor.integration.CloudVendorIntegrationTest" time="0.032">
+    <system-out><![CDATA[2025-11-29 10:14:06.739 [main] DEBUG org.hibernate.SQL - 
     select
         cv1_0.vendor_id,
         cv1_0.vendor_address,
@@ -1010,7 +1010,7 @@ MockHttpServletResponse:
         cv1_0.vendor_phone_number 
     from
         cloud_vendor cv1_0
-2025-11-19 22:03:55.978 [main] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'application/octet-stream' is not supported]
+2025-11-29 10:14:06.751 [main] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'application/octet-stream' is not supported]
 
 MockHttpServletRequest:
       HTTP Method = POST
@@ -1050,8 +1050,8 @@ MockHttpServletResponse:
           Cookies = []
 ]]></system-out>
   </testcase>
-  <testcase name="shouldHandleDuplicateVendorCreation" classname="com.example.cloudvendor.integration.CloudVendorIntegrationTest" time="0.018">
-    <system-out><![CDATA[2025-11-19 22:03:55.986 [main] DEBUG org.hibernate.SQL - 
+  <testcase name="shouldHandleDuplicateVendorCreation" classname="com.example.cloudvendor.integration.CloudVendorIntegrationTest" time="0.043">
+    <system-out><![CDATA[2025-11-29 10:14:06.772 [main] DEBUG org.hibernate.SQL - 
     select
         cv1_0.vendor_id,
         cv1_0.vendor_address,
@@ -1059,16 +1059,16 @@ MockHttpServletResponse:
         cv1_0.vendor_phone_number 
     from
         cloud_vendor cv1_0
-2025-11-19 22:03:55.989 [main] INFO  c.e.c.c.CloudVendorController - POST /cloudvendor - Creating new cloud vendor with ID: V001
-2025-11-19 22:03:55.989 [main] DEBUG c.e.c.s.impl.CloudVendorServiceImpl - Creating cloud vendor with ID: V001
-2025-11-19 22:03:55.990 [main] DEBUG org.hibernate.SQL - 
+2025-11-29 10:14:06.778 [main] INFO  c.e.c.c.CloudVendorController - POST /cloudvendor - Creating new cloud vendor with ID: V001
+2025-11-29 10:14:06.778 [main] DEBUG c.e.c.s.impl.CloudVendorServiceImpl - Creating cloud vendor with ID: V001
+2025-11-29 10:14:06.781 [main] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         cloud_vendor cv1_0 
     where
         cv1_0.vendor_id=?
-2025-11-19 22:03:55.991 [main] DEBUG org.hibernate.SQL - 
+2025-11-29 10:14:06.783 [main] DEBUG org.hibernate.SQL - 
     select
         cv1_0.vendor_id,
         cv1_0.vendor_address,
@@ -1078,26 +1078,26 @@ MockHttpServletResponse:
         cloud_vendor cv1_0 
     where
         cv1_0.vendor_id=?
-2025-11-19 22:03:55.991 [main] INFO  c.e.c.s.impl.CloudVendorServiceImpl - Cloud vendor created successfully with ID: V001
-2025-11-19 22:03:55.992 [main] INFO  c.e.c.c.CloudVendorController - Successfully created cloud vendor with ID: V001
-2025-11-19 22:03:55.994 [main] INFO  c.e.c.c.CloudVendorController - POST /cloudvendor - Creating new cloud vendor with ID: V001
-2025-11-19 22:03:55.994 [main] DEBUG c.e.c.s.impl.CloudVendorServiceImpl - Creating cloud vendor with ID: V001
-2025-11-19 22:03:55.995 [main] DEBUG org.hibernate.SQL - 
+2025-11-29 10:14:06.785 [main] INFO  c.e.c.s.impl.CloudVendorServiceImpl - Cloud vendor created successfully with ID: V001
+2025-11-29 10:14:06.785 [main] INFO  c.e.c.c.CloudVendorController - Successfully created cloud vendor with ID: V001
+2025-11-29 10:14:06.788 [main] INFO  c.e.c.c.CloudVendorController - POST /cloudvendor - Creating new cloud vendor with ID: V001
+2025-11-29 10:14:06.790 [main] DEBUG c.e.c.s.impl.CloudVendorServiceImpl - Creating cloud vendor with ID: V001
+2025-11-29 10:14:06.790 [main] DEBUG org.hibernate.SQL - 
     insert 
     into
         cloud_vendor
         (vendor_address, vendor_name, vendor_phone_number, vendor_id) 
     values
         (?, ?, ?, ?)
-2025-11-19 22:03:55.996 [main] DEBUG org.hibernate.SQL - 
+2025-11-29 10:14:06.792 [main] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         cloud_vendor cv1_0 
     where
         cv1_0.vendor_id=?
-2025-11-19 22:03:55.996 [main] WARN  c.e.c.s.impl.CloudVendorServiceImpl - Cloud Vendor with ID V001 already exists
-2025-11-19 22:03:55.996 [main] ERROR c.e.c.c.CloudVendorController - Error creating cloud vendor with ID: V001 - Cloud Vendor with ID V001 already exists
+2025-11-29 10:14:06.792 [main] WARN  c.e.c.s.impl.CloudVendorServiceImpl - Cloud Vendor with ID V001 already exists
+2025-11-29 10:14:06.792 [main] ERROR c.e.c.c.CloudVendorController - Error creating cloud vendor with ID: V001 - Cloud Vendor with ID V001 already exists
 
 MockHttpServletRequest:
       HTTP Method = POST
@@ -1137,8 +1137,8 @@ MockHttpServletResponse:
           Cookies = []
 ]]></system-out>
   </testcase>
-  <testcase name="shouldHandleMultipleVendorsCorrectly" classname="com.example.cloudvendor.integration.CloudVendorIntegrationTest" time="0.035">
-    <system-out><![CDATA[2025-11-19 22:03:56.006 [main] DEBUG org.hibernate.SQL - 
+  <testcase name="shouldHandleMultipleVendorsCorrectly" classname="com.example.cloudvendor.integration.CloudVendorIntegrationTest" time="0.093">
+    <system-out><![CDATA[2025-11-29 10:14:06.825 [main] DEBUG org.hibernate.SQL - 
     select
         cv1_0.vendor_id,
         cv1_0.vendor_address,
@@ -1146,16 +1146,16 @@ MockHttpServletResponse:
         cv1_0.vendor_phone_number 
     from
         cloud_vendor cv1_0
-2025-11-19 22:03:56.009 [main] INFO  c.e.c.c.CloudVendorController - POST /cloudvendor - Creating new cloud vendor with ID: V001
-2025-11-19 22:03:56.010 [main] DEBUG c.e.c.s.impl.CloudVendorServiceImpl - Creating cloud vendor with ID: V001
-2025-11-19 22:03:56.011 [main] DEBUG org.hibernate.SQL - 
+2025-11-29 10:14:06.830 [main] INFO  c.e.c.c.CloudVendorController - POST /cloudvendor - Creating new cloud vendor with ID: V001
+2025-11-29 10:14:06.830 [main] DEBUG c.e.c.s.impl.CloudVendorServiceImpl - Creating cloud vendor with ID: V001
+2025-11-29 10:14:06.830 [main] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         cloud_vendor cv1_0 
     where
         cv1_0.vendor_id=?
-2025-11-19 22:03:56.012 [main] DEBUG org.hibernate.SQL - 
+2025-11-29 10:14:06.834 [main] DEBUG org.hibernate.SQL - 
     select
         cv1_0.vendor_id,
         cv1_0.vendor_address,
@@ -1165,25 +1165,25 @@ MockHttpServletResponse:
         cloud_vendor cv1_0 
     where
         cv1_0.vendor_id=?
-2025-11-19 22:03:56.013 [main] INFO  c.e.c.s.impl.CloudVendorServiceImpl - Cloud vendor created successfully with ID: V001
-2025-11-19 22:03:56.014 [main] INFO  c.e.c.c.CloudVendorController - Successfully created cloud vendor with ID: V001
-2025-11-19 22:03:56.016 [main] INFO  c.e.c.c.CloudVendorController - POST /cloudvendor - Creating new cloud vendor with ID: V002
-2025-11-19 22:03:56.016 [main] DEBUG c.e.c.s.impl.CloudVendorServiceImpl - Creating cloud vendor with ID: V002
-2025-11-19 22:03:56.018 [main] DEBUG org.hibernate.SQL - 
+2025-11-29 10:14:06.836 [main] INFO  c.e.c.s.impl.CloudVendorServiceImpl - Cloud vendor created successfully with ID: V001
+2025-11-29 10:14:06.836 [main] INFO  c.e.c.c.CloudVendorController - Successfully created cloud vendor with ID: V001
+2025-11-29 10:14:06.841 [main] INFO  c.e.c.c.CloudVendorController - POST /cloudvendor - Creating new cloud vendor with ID: V002
+2025-11-29 10:14:06.841 [main] DEBUG c.e.c.s.impl.CloudVendorServiceImpl - Creating cloud vendor with ID: V002
+2025-11-29 10:14:06.842 [main] DEBUG org.hibernate.SQL - 
     insert 
     into
         cloud_vendor
         (vendor_address, vendor_name, vendor_phone_number, vendor_id) 
     values
         (?, ?, ?, ?)
-2025-11-19 22:03:56.018 [main] DEBUG org.hibernate.SQL - 
+2025-11-29 10:14:06.844 [main] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         cloud_vendor cv1_0 
     where
         cv1_0.vendor_id=?
-2025-11-19 22:03:56.019 [main] DEBUG org.hibernate.SQL - 
+2025-11-29 10:14:06.844 [main] DEBUG org.hibernate.SQL - 
     select
         cv1_0.vendor_id,
         cv1_0.vendor_address,
@@ -1193,18 +1193,18 @@ MockHttpServletResponse:
         cloud_vendor cv1_0 
     where
         cv1_0.vendor_id=?
-2025-11-19 22:03:56.020 [main] INFO  c.e.c.s.impl.CloudVendorServiceImpl - Cloud vendor created successfully with ID: V002
-2025-11-19 22:03:56.020 [main] INFO  c.e.c.c.CloudVendorController - Successfully created cloud vendor with ID: V002
-2025-11-19 22:03:56.021 [main] INFO  c.e.c.c.CloudVendorController - GET /cloudvendor - Retrieving all cloud vendors
-2025-11-19 22:03:56.021 [main] DEBUG c.e.c.s.impl.CloudVendorServiceImpl - Retrieving all cloud vendors
-2025-11-19 22:03:56.022 [main] DEBUG org.hibernate.SQL - 
+2025-11-29 10:14:06.848 [main] INFO  c.e.c.s.impl.CloudVendorServiceImpl - Cloud vendor created successfully with ID: V002
+2025-11-29 10:14:06.848 [main] INFO  c.e.c.c.CloudVendorController - Successfully created cloud vendor with ID: V002
+2025-11-29 10:14:06.850 [main] INFO  c.e.c.c.CloudVendorController - GET /cloudvendor - Retrieving all cloud vendors
+2025-11-29 10:14:06.852 [main] DEBUG c.e.c.s.impl.CloudVendorServiceImpl - Retrieving all cloud vendors
+2025-11-29 10:14:06.855 [main] DEBUG org.hibernate.SQL - 
     insert 
     into
         cloud_vendor
         (vendor_address, vendor_name, vendor_phone_number, vendor_id) 
     values
         (?, ?, ?, ?)
-2025-11-19 22:03:56.023 [main] DEBUG org.hibernate.SQL - 
+2025-11-29 10:14:06.855 [main] DEBUG org.hibernate.SQL - 
     select
         cv1_0.vendor_id,
         cv1_0.vendor_address,
@@ -1212,8 +1212,8 @@ MockHttpServletResponse:
         cv1_0.vendor_phone_number 
     from
         cloud_vendor cv1_0
-2025-11-19 22:03:56.025 [main] INFO  c.e.c.s.impl.CloudVendorServiceImpl - Retrieved 2 cloud vendor(s) successfully
-2025-11-19 22:03:56.025 [main] INFO  c.e.c.c.CloudVendorController - Successfully retrieved 2 cloud vendor(s)
+2025-11-29 10:14:06.860 [main] INFO  c.e.c.s.impl.CloudVendorServiceImpl - Retrieved 2 cloud vendor(s) successfully
+2025-11-29 10:14:06.860 [main] INFO  c.e.c.c.CloudVendorController - Successfully retrieved 2 cloud vendor(s)
 
 MockHttpServletRequest:
       HTTP Method = GET
@@ -1251,26 +1251,26 @@ MockHttpServletResponse:
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
-2025-11-19 22:03:56.027 [main] INFO  c.e.c.c.CloudVendorController - DELETE /cloudvendor/V001 - Deleting cloud vendor by ID
-2025-11-19 22:03:56.029 [main] DEBUG c.e.c.s.impl.CloudVendorServiceImpl - Deleting cloud vendor with ID: V001
-2025-11-19 22:03:56.029 [main] DEBUG org.hibernate.SQL - 
+2025-11-29 10:14:06.875 [main] INFO  c.e.c.c.CloudVendorController - DELETE /cloudvendor/V001 - Deleting cloud vendor by ID
+2025-11-29 10:14:06.878 [main] DEBUG c.e.c.s.impl.CloudVendorServiceImpl - Deleting cloud vendor with ID: V001
+2025-11-29 10:14:06.882 [main] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         cloud_vendor cv1_0 
     where
         cv1_0.vendor_id=?
-2025-11-19 22:03:56.030 [main] INFO  c.e.c.s.impl.CloudVendorServiceImpl - Cloud vendor deleted successfully with ID: V001
-2025-11-19 22:03:56.031 [main] INFO  c.e.c.c.CloudVendorController - Successfully deleted cloud vendor with ID: V001
-2025-11-19 22:03:56.032 [main] INFO  c.e.c.c.CloudVendorController - GET /cloudvendor - Retrieving all cloud vendors
-2025-11-19 22:03:56.032 [main] DEBUG c.e.c.s.impl.CloudVendorServiceImpl - Retrieving all cloud vendors
-2025-11-19 22:03:56.033 [main] DEBUG org.hibernate.SQL - 
+2025-11-29 10:14:06.886 [main] INFO  c.e.c.s.impl.CloudVendorServiceImpl - Cloud vendor deleted successfully with ID: V001
+2025-11-29 10:14:06.886 [main] INFO  c.e.c.c.CloudVendorController - Successfully deleted cloud vendor with ID: V001
+2025-11-29 10:14:06.888 [main] INFO  c.e.c.c.CloudVendorController - GET /cloudvendor - Retrieving all cloud vendors
+2025-11-29 10:14:06.888 [main] DEBUG c.e.c.s.impl.CloudVendorServiceImpl - Retrieving all cloud vendors
+2025-11-29 10:14:06.891 [main] DEBUG org.hibernate.SQL - 
     delete 
     from
         cloud_vendor 
     where
         vendor_id=?
-2025-11-19 22:03:56.034 [main] DEBUG org.hibernate.SQL - 
+2025-11-29 10:14:06.891 [main] DEBUG org.hibernate.SQL - 
     select
         cv1_0.vendor_id,
         cv1_0.vendor_address,
@@ -1278,8 +1278,8 @@ MockHttpServletResponse:
         cv1_0.vendor_phone_number 
     from
         cloud_vendor cv1_0
-2025-11-19 22:03:56.034 [main] INFO  c.e.c.s.impl.CloudVendorServiceImpl - Retrieved 1 cloud vendor(s) successfully
-2025-11-19 22:03:56.034 [main] INFO  c.e.c.c.CloudVendorController - Successfully retrieved 1 cloud vendor(s)
+2025-11-29 10:14:06.893 [main] INFO  c.e.c.s.impl.CloudVendorServiceImpl - Retrieved 1 cloud vendor(s) successfully
+2025-11-29 10:14:06.893 [main] INFO  c.e.c.c.CloudVendorController - Successfully retrieved 1 cloud vendor(s)
 
 MockHttpServletRequest:
       HTTP Method = GET
@@ -1319,8 +1319,8 @@ MockHttpServletResponse:
           Cookies = []
 ]]></system-out>
   </testcase>
-  <testcase name="shouldHandleMalformedJsonRequests" classname="com.example.cloudvendor.integration.CloudVendorIntegrationTest" time="0.037">
-    <system-out><![CDATA[2025-11-19 22:03:56.049 [main] DEBUG org.hibernate.SQL - 
+  <testcase name="shouldHandleMalformedJsonRequests" classname="com.example.cloudvendor.integration.CloudVendorIntegrationTest" time="0.03">
+    <system-out><![CDATA[2025-11-29 10:14:06.912 [main] DEBUG org.hibernate.SQL - 
     select
         cv1_0.vendor_id,
         cv1_0.vendor_address,
@@ -1328,7 +1328,7 @@ MockHttpServletResponse:
         cv1_0.vendor_phone_number 
     from
         cloud_vendor cv1_0
-2025-11-19 22:03:56.063 [main] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('}' (code 125)): expected a value]
+2025-11-29 10:14:06.916 [main] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('}' (code 125)): expected a value]
 
 MockHttpServletRequest:
       HTTP Method = POST

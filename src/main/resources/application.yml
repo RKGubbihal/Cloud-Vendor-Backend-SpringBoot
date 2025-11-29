@@ -7,9 +7,12 @@ spring:
     name: cloud-vendor-api
   
   datasource:
-    url: jdbc:mysql://localhost:3306/vendor_mgmt_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
-    username: root
-    password: MySQLhandson#2023
+#    url: jdbc:mysql://localhost:3306/vendor_mgmt_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
+#    username: root
+#    password: MySQLhandson#2023
+    url: jdbc:mysql://${DB_HOST}/${DB_NAME}?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
     driver-class-name: com.mysql.cj.jdbc.Driver
     #url: jdbc:mysql://localhost:3306/cloudvendor_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
 

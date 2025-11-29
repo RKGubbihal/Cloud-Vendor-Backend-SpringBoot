@@ -42,7 +42,7 @@ Dockerfile
 docker-compose.yml
 
 # Documentation
-README.md
+ProjectQuickRef/README.md
 LOGGING.md
 *.md
 
